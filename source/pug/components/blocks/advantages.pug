@@ -1,0 +1,13 @@
+mixin advantages()
+  section.advantages(id="advantages")
+    .container
+      div
+        h2.advantages__title(data-aos="advantages-title-anim") Build a&nbsp;platform for&nbsp;#[span(data-aos="advantages-span-anim" data-aos-delay="600")!="safe medicines"]
+        div
+          .advantages__text(data-aos="fade-left")!="We&nbsp;are trying to&nbsp;increase access to&nbsp;affordable, high quality medicines for everyone across the world, starting with Africa. The way we&nbsp;go&nbsp;about that is&nbsp;to&nbsp;build a&nbsp;platform that enables hospitals, pharmacies, and wholesalers to&nbsp;authenticate drugs and provides solutions to&nbsp;automate management, financing, and invoicing so&nbsp;that drugs are always accessible and affordable."
+          .advantages__button(data-aos="fade-up" data-aos-delay="500")
+            a(href="#wholesalers", data-trigger="#wholesalers").btn.btn--transparent Find out more
+      ul.advantages__list
+        - for (let i = 0; i < advantagesCards.length; i++)
+            li
+              +advantages-card(advantagesCards[i])(data-aos="fade" data-aos-delay=`${(i + 1) * 100 + 400}` data-aos-duration="1500")

@@ -1,0 +1,85 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black:               #000000;
+$color-default-white:               #ffffff;
+$color-transparent:                 rgba(255, 255, 255, 0);
+
+// Project palette
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+
+$color-neon-blue:                   #2c39f2;
+$color-torch-red:                   #ff1553;
+$color-night-rider:                 #333333;
+$color-nero:                        #232323;
+$color-bunting:                     #242d41;
+$color-summer-sky:                  #27aae1;
+$color-broom-opacity-01:            #e1ce271a;
+$color-madang-opacity-01:           #beff9f1a;
+$color-summer-sky-opacity-01:       #27aae11a;
+$color-grey:                        #808080;
+$color-grey-opacity-01:             #8080806a;
+$color-alice-blue:                  #f3fcff;
+$color-alice-blue-2:                #eaf7fc;
+$color-promenade:                   #fcfae9;
+$color-panache:                     #f9fff5;
+$color-midnight:                    #213248;
+$color-maya-blue:                   #4fcbff;
+$color-pacific-blue:                #0999d6;
+$color-gainsboro:                   #e1e1e1;
+$color-silver:                      #c0c0c0;
+$color-cinnabar:                    #dc3f39;
+$color-licorice:                    #2f394e;
+$color-whitesmoke:                  #f7f7f7;
+$color-pattens-blue:                #d4eef9;
+$color-alice-blue-3:                #e9f7fc;
+$color-lavender-blush:              #fffbfd;
+$color-light-blue:                  #a9ddf3;
+$color-white-smoke:                 #f6f6f6;
+$color-broom:                       #e1ce27;
+$color-congo-brown:                 #634949;
+
+// Gradient
+
+$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
+// Typography
+// ---------------------------------
+
+// переменная используемая в html для подключения скейлинга
+$fz-default:                        16px;
+
+// у некоторых шрифтов в ios возникают проблемы с символом рубля
+// https://www.artlebedev.ru/kovodstvo/sections/159/#13
+$ff-montserrat:                     "Montserrat", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
+$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+$trans-600:                         0.6s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-320:                            320px;
+$vp-375:                            375px;
+$vp-500:                            500px;
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1280:                           1280px;
+$vp-1440:                           1440px;
+$vp-1920:                           1920px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

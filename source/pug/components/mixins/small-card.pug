@@ -1,0 +1,11 @@
+mixin small-card(data)
+  each item, index in data
+    li.small-card(class=item.className)
+      .small-card__image(class=item.class)
+        picture
+          source(srcset=item.imageMobile, media="(max-width: 767px)")
+          source(srcset=item.imageTablet, media="(max-width: 1023px)")
+          source(srcset=item.imageDesktop, media="(max-width: 1919px)")
+          img(src=item.image, alt='логотип')
+      .small-card__text-wrapper
+        p.small-card__text!=item.text

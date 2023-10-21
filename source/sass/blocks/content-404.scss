@@ -1,0 +1,154 @@
+.content-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content-404 .container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  max-width: 1500px;
+  min-height: 100vh;
+
+  @include vp-1919 {
+    max-width: 1340px;
+  }
+
+  @include vp-1439 {
+    max-width: none;
+  }
+
+  & > div {
+    position: relative;
+    margin-top: 382px;
+
+    @include vp-1919 {
+      margin-top: 354px;
+    }
+
+    @include vp-1023 {
+      margin-top: 406px;
+    }
+
+    @include vp-767 {
+      margin-top: 209px;
+      padding: 0 5px;
+    }
+  }
+}
+
+.content-404__bg-image {
+  position: absolute;
+  z-index: -1;
+  width: 1294px;
+  height: auto;
+  top: -57px;
+  left: 192px;
+
+  @include vp-1919 {
+    left: 111px;
+    top: -80px;
+    width: 1069px;
+  }
+
+  @include vp-1279 {
+    left: 0;
+    top: -80px;
+    width: 800px;
+  }
+
+  @include vp-1023 {
+    left: 40px;
+    top: -30px;
+    width: 647px;
+  }
+
+  @include vp-767 {
+    left: 30px;
+    top: -30px;
+    width: 450px;
+  }
+
+  @include vp-499 {
+    width: 350px;
+  }
+
+  @include vp-374 {
+    left: 20px;
+    top: -115px;
+    width: 255px;
+  }
+
+  & img {
+    object-fit: cover;
+    width: auto;
+    height: auto;
+  }
+}
+
+.content-404 h1 {
+  margin: 0;
+  margin-bottom: 46px;
+  font-size: 100px;
+  line-height: 83px;
+  font-weight: 900;
+  letter-spacing: 6px;
+
+  @include vp-1279 {
+    font-size: 72px;
+    line-height: 60px;
+    margin-bottom: 15px;
+  }
+
+  @include vp-1023 {
+    letter-spacing: 4.2px;
+    margin-bottom: 16px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 24px;
+    letter-spacing: 0.08em;
+  }
+}
+
+.content-404 p {
+  max-width: 805px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 39px;
+
+  @include vp-1023 {
+    margin: 0;
+    margin-bottom: 31px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 24px;
+  }
+}
+
+.content-404__buttons {
+  display: flex;
+  align-items: center;
+
+  & a:not(:last-of-type) {
+    margin-right: 22px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: stretch;
+
+    & a:nth-child(n) {
+      font-size: 20px;
+      line-height: 24px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+}

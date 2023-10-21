@@ -1,0 +1,201 @@
+.video {
+  position: relative;
+  padding-bottom: 100px;
+
+  @include vp-1023 {
+    padding-bottom: 50px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 68%;
+    height: 1px;
+    margin: 0 auto;
+    background-image: url('../img/svg/icon-point.svg');
+    background-size: 4px 1px;
+    border: none;
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 65% 1fr;
+    grid-gap: 2%;
+    align-items: center;
+    padding-top: 97px;
+    padding-left: 4%;
+    padding-right: 3%;
+
+    @include vp-1919 {
+      padding-top: 78px;
+    }
+
+    @include vp-1023 {
+      grid-gap: 3.1%;
+      padding-top: 42px;
+      padding-left: 5px;
+      padding-right: 0;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      padding-top: 24px;
+      padding-left: 0;
+    }
+  }
+
+  &__text-block {
+    padding-top: 28px;
+
+    @include vp-1919 {
+      padding-top: 42px;
+    }
+
+    @include vp-1023 {
+      padding-top: 31px;
+    }
+
+    @include vp-767 {
+      padding-top: 24px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 28px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    @include vp-1919 {
+      margin-bottom: 8px;
+      font-size: 28px;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 26px;
+      font-size: 20px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  &__frame {
+    position: relative;
+    height: 0;
+    padding-bottom: calc(100% * 502 / 891);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 17px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: rotate(-2deg);
+      background-color: $color-alice-blue-2;
+      border-radius: 70px;
+      z-index: -1;
+
+      @include vp-767 {
+        border-radius: 40px;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 97%;
+    height: 98%;
+    margin: 0 auto;
+    object-fit: cover;
+    transform: translateY(20px);
+    border-radius: 70px;
+    overflow: hidden;
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+    transition: opacity $trans-default, visibility $trans-default;
+
+    @include vp-1919 {
+      height: 97%;
+    }
+
+    @include vp-1023 {
+      width: 97%;
+    }
+
+    @include vp-767 {
+      width: 96%;
+      height: 96%;
+      border-radius: 40px;
+    }
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 22.5%;
+    height: auto;
+    margin: auto;
+    padding: 0;
+    transform: translate(-4%, 2%);
+    background-color: $color-transparent;
+    -webkit-tap-highlight-color: $color-transparent;
+    transition: opacity $trans-default;
+
+    @include vp-1919 {
+      width: 26.5%;
+      transform: translate(0, 0);
+    }
+
+    @include vp-1023 {
+      transform: translate(-5px,3px);
+    }
+
+    @include vp-767 {
+      width: 30.5%;
+      transform: translate(-1px,0px);
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

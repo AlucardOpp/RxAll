@@ -1,0 +1,407 @@
+.intro-scanner {
+  padding-top: 231px;
+  padding-bottom: 219px;
+  position: relative;
+
+  @include vp-1919 {
+    padding-top: 242px;
+    padding-bottom: 173px;
+  }
+
+  @include vp-1439 {
+    padding-top: 203px;
+    padding-bottom: 99px;
+  }
+
+  @include vp-767 {
+    padding-top: 126px;
+    padding-bottom: 75px;
+  }
+
+  &__container {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include vp-1439 {
+      margin-left: 0;
+    }
+  }
+
+  &__title-container,
+  &__subtitle,
+  &__description {
+    max-width: 780px;
+
+    @include vp-1919 {
+      max-width: 650px;
+    }
+
+    @include vp-1439 {
+      max-width: 470px;
+    }
+
+    @include vp-767 {
+      max-width: none;
+    }
+  }
+
+
+  &__title-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 21px;
+
+    @include vp-1919 {
+      margin-bottom: 16px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 14px;
+    }
+
+    & img {
+      margin-top: 16px;
+      margin-right: 4px;
+      object-fit: cover;
+
+      @include vp-1919 {
+        margin-top: 10px;
+        width: 110px;
+        height: 87px;
+      }
+
+      @include vp-1439 {
+        margin-top: 6px;
+        width: 80px;
+        height: 63px;
+      }
+
+      @include vp-767 {
+        margin-top: 4px;
+        width: 45px;
+        height: 35px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 146px;
+    text-transform: uppercase;
+    color: $color-night-rider;
+    letter-spacing: 0.03em;
+
+    @include vp-1919 {
+      font-size: 100px;
+      line-height: 122px;
+    }
+
+    @include vp-1439 {
+      font-size: 72px;
+      line-height: 88px;
+    }
+
+    @include vp-767 {
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+
+  &__subtitle {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 11px 0;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 59px;
+    text-transform: uppercase;
+    color: $color-night-rider;
+
+    @include vp-1919 {
+      font-size: 44px;
+      line-height: 54px;
+      margin-bottom: 29px;
+    }
+
+    @include vp-1439 {
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 4px;
+    }
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 27px;
+      margin-bottom: 17px;
+    }
+
+    & span {
+      margin-top: -3px;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+
+      @include vp-1919 {
+        margin-top: 0;
+      }
+
+      @include vp-1439 {
+        margin-top: -1px;
+      }
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 37px;
+    margin: 0 0 38px 0;
+    color: $color-night-rider;
+
+    @include vp-1919 {
+      margin-bottom: 22px;
+      font-size: 22px;
+    }
+
+    @include vp-1439 {
+      margin-bottom: 43px;
+      font-size: 18px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 160%;
+      max-width: 234px;
+      margin-bottom: 46px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 164px;
+
+    @include vp-1919 {
+      margin-bottom: 125px;
+    }
+
+    @include vp-1439 {
+      margin-bottom: 111px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 75px;
+      flex-direction: column;
+    }
+  }
+
+  &__button {
+    margin: 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    @include vp-767 {
+      width: 300px;
+      padding-top: 19px;
+      padding-bottom: 19px;
+    }
+
+    &--demo {
+      width: 288px;
+    }
+
+    &--works {
+      width: 215px;
+
+      @include vp-767 {
+        font-size: 20px;
+        line-height: 22px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+
+      @include vp-767 {
+        margin-right: 0;
+        margin-bottom: 11px;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include vp-767 {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    padding-left: 19px;
+    border-left: 3px solid $color-cinnabar;
+    display: flex;
+    flex-direction: column;
+
+    @include vp-767 {
+      position: relative;
+      border-left: 0;
+      padding-left: 22px;
+
+      &::before {
+        border-left: 3px solid $color-cinnabar;
+        content: "";
+        width: 3px;
+        height: calc(100% - 8px);
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 66px;
+
+      @include vp-1919 {
+        margin-right: 36px;
+      }
+
+      @include vp-767 {
+        margin-right: 0;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__item-title {
+    margin: 0 0 8px 0;
+    color: $color-night-rider;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+
+    @include vp-1919 {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 14px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__item-description {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: $color-night-rider;
+  }
+
+  &__image {
+    position: absolute;
+    top: -103px;
+    right: -309px;
+    z-index: -1;
+    width: 1251px;
+    height: 1214px;
+
+    @include vp-1919 {
+      width: 1111px;
+      height: 1078px;
+      top: -78px;
+      right: -369px;
+    }
+
+    @include vp-1439{
+      width: 834px;
+      height: 809px;
+      top: -54px;
+      right: -335px;
+    }
+
+    @include vp-1023 {
+      width: 541px;
+      height: 525px;
+      top: 17px;
+      right: -208px;
+    }
+
+    @include vp-767 {
+      width: 386px;
+      height: 375px;
+      top: -11px;
+      right: -145px;
+      opacity: 0.5;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    border: 1px solid $color-light-blue;
+    border-radius: 400px;
+    transform: rotate(-45deg);
+
+    @include vp-767 {
+      display: none;
+    }
+
+    &--1 {
+      top: -385px;
+      right: 364px;
+      width: 416px;
+      height: 1153px;
+      z-index: -2;
+
+      @include vp-1919 {
+        top: -413px;
+        right: 182px;
+      }
+
+      @include vp-1439 {
+        top: -396px;
+        right: -67px;
+      }
+
+      @include vp-1023 {
+        top: -371px;
+        right: -66px;
+        width: 333px;
+        height: 1028px;
+      }
+    }
+
+    &--2 {
+      top: -202px;
+      left: -237px;
+      width: 227px;
+      height: 630px;
+      z-index: -2;
+
+      @include vp-1919 {
+        top: -295px;
+        left: -206px;
+      }
+
+      @include vp-1439 {
+        top: -380px;
+        left: -213px;
+      }
+
+      @include vp-1023 {
+        height: 391px;
+        top: -191px;
+        left: -120px;
+      }
+    }
+  }
+}

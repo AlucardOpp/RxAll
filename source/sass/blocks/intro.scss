@@ -1,0 +1,165 @@
+.intro {
+  padding: 232px 0;
+
+  @include vp-1919 {
+    padding: 194px 0 141px;
+  }
+
+  @include vp-1023 {
+    padding: 189px 0 93px;
+  }
+
+  @include vp-767 {
+    padding: 134px 0 66px;
+  }
+
+  & .container {
+    position: relative;
+  }
+
+  &__text-content {
+    padding-left: 51px;
+    position: relative;
+    z-index: 1;
+
+    @include vp-1439 {
+      padding-left: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  &__title-text {
+    font-weight: 900;
+    color: $color-night-rider;
+    line-height: 84.4%;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+
+    &--1 {
+      font-size: 120px;
+      max-width: 753px;
+      margin-bottom: 16px;
+
+      @include vp-1919 {
+        margin-bottom: 6px;
+      }
+
+      @include vp-1023 {
+        font-size: 80px;
+        max-width: 357px;
+        margin-bottom: 15px;
+      }
+
+      @include vp-767 {
+        font-size: 40px;
+        margin-bottom: 7px;
+      }
+    }
+
+    &--2,
+    &--3 {
+      font-size: 80px;
+      max-width: 819px;
+
+      @include vp-1919 {
+        font-size: 70px;
+      }
+
+      @include vp-1023 {
+        font-size: 48px;
+        max-width: 485px;
+      }
+
+      @include vp-767 {
+        font-size: 22px;
+      }
+    }
+
+    &--2 {
+      letter-spacing: 0.04em;
+    }
+
+    &--3 {
+      margin-bottom: 31px;
+
+      @include vp-1919 {
+        margin-bottom: 20px;
+      }
+
+      @include vp-1023 {
+        margin-bottom: 23px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 12px;
+      }
+    }
+
+    &--4 {
+      font-weight: 400;
+      font-size: 60px;
+      max-width: 697px;
+      margin-bottom: 20px;
+      line-height: 103.4%;
+      letter-spacing: 0.02em;
+
+      @include vp-1919 {
+        font-size: 50px;
+        margin-bottom: 22px;
+      }
+
+      @include vp-1023 {
+        font-size: 40px;
+        max-width: 386px;
+        margin-bottom: 23px;
+      }
+
+      @include vp-767 {
+        font-size: 22px;
+      }
+    }
+  }
+
+  &__description {
+    max-width: 711px;
+    color: $color-night-rider;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    margin: 0 0 20px 0;
+
+    @include vp-1919 {
+      max-width: 681px;
+      margin-bottom: 22px;
+    }
+
+    @include vp-1023 {
+      line-height: 140%;
+      margin-bottom: 16px;
+      max-width: 624px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      max-width: none;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
+
+    & br {
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    width: 154px;
+  }
+}

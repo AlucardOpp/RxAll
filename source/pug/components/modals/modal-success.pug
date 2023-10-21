@@ -1,0 +1,9 @@
+mixin modal-success()
+  .modal-success
+    h2.modal-success__title!="Thank you!"
+    p.modal-success__description!="We&rsquo;ve received your inquiry and will get back to&nbsp;you within 24&nbsp;hours."
+    .modal-success__buttons
+      button(type="button" aria-label="Close modal" data-close-modal).modal-success__button.btn.btn--transparent
+        +icon("icon-btn-arrow-left", 16, 14)
+        span!="Go back"
+      +btn({text: "Main page", href: "./index.html"}).modal-success__button.btn--sky

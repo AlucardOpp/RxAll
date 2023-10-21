@@ -1,0 +1,47 @@
+.modal-video {
+  width: 1153px;
+  border-radius: 11px;
+
+  @include vp-1439 {
+    width: 865px;
+  }
+
+  @include vp-1023 {
+    width: 634px;
+  }
+
+  @include vp-767 {
+    position: relative;
+    width: 100%;
+    border-radius: 0;
+    height: 0;
+    padding-bottom: calc(100% * 183 / 320);
+  }
+
+  & iframe {
+    width: 100%;
+    height: 648px;
+    border: none;
+    border-radius: inherit;
+
+    @include vp-1439 {
+      height: 486px;
+    }
+
+    @include vp-1023 {
+      height: 356px;
+    }
+
+    @include vp-767 {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+    }
+  }
+}

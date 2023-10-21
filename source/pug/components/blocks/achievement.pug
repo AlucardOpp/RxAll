@@ -1,0 +1,71 @@
+mixin achievement()
+  -
+    const progress = [
+      {
+        number: '6 years',
+        desc: 'Of experience',
+        delay: 400,
+      },
+      {
+        number: '300+',
+        desc: 'Drugs types tested',
+        delay: 600,
+      },
+      {
+        number: '2.5mln+',
+        desc: 'Lives protected',
+        delay: 500,
+      },
+      {
+        number: '200+',
+        desc: 'Pharmacy partners',
+        delay: 700,
+      },
+    ]
+
+    const transformationList = [
+      {
+        icon: 'icon-transformation-1',
+        title: 'Innovative',
+        text: 'We emphasize science and harness the power of technology to solve global healthcare challenges.',
+      },
+      {
+        icon: 'icon-transformation-2',
+        title: 'Open minded',
+        text: 'We strive for continuous improvement, learn from those around us, and challenge the status quo.',
+      },
+      {
+        icon: 'icon-transformation-3',
+        title: 'Co-impacting',
+        text: 'We believe that only together, with support and cooperation, we can make a difference in the world.',
+      },
+      {
+        icon: 'icon-transformation-4',
+        title: 'Passionate',
+        text: 'We rise every morning to ensure a future where everyone has access to safe drugs.',
+      },
+    ]
+
+  section.achievement(data-animate)
+    .container
+      h2.visually-hidden Achievement
+      .achievement__block
+        .achievement__block-pattern(data-aos="about-pattern" data-aos-duration="1000")
+        .achievement__block-text
+          p.achievement__block-title World that #[span we create] is the world where everyone #[span can trust medicine].
+          p.achievement__block-title Where medicine will #[span make us well], not sick.
+        ul.achievement__progress
+          each item, i in progress
+            li.achievement__progress-item(class=`achievement__progress-item--${i + 1}`, data-aos="fade", data-aos-duration="1500", data-aos-delay=item.delay, data-aos-anchor=".achievement__progress")
+              p.achievement__progress-number= item.number
+              span.achievement__progress-desc= item.desc
+      .achievement__transformation
+        .achievement__transformation-pattern(data-aos="about-pattern" data-aos-duration="1000")
+        p.achievement__transformation-title Values-driven transformation
+        ul.achievement__transformation-list
+          each item, i in transformationList
+            li.achievement__transformation-item(class=`achievement__transformation-item--${i + 1}`, data-aos="fade", data-aos-duration="1500", data-aos-delay=`${(i + 1) * 100 + 400}`, data-aos-anchor=".achievement__transformation-list")
+              +icon(item.icon, 68, 68)
+              .achievement__transformation__block
+                p.achievement__transformation-subtitle= item.title
+                p.achievement__transformation-text= item.text

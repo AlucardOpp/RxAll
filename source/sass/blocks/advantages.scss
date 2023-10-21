@@ -1,0 +1,256 @@
+.advantages {
+  margin-bottom: 171px;
+
+  @include vp-1919 {
+    margin-bottom: 155px;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 70px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 21px;
+  }
+}
+
+.advantages__title {
+  margin: 0;
+  margin-right: 75px;
+  min-width: 524px;
+  font-size: 42px;
+  line-height: 46px;
+
+  &::before {
+    @include vp-1023 {
+      content: ".........................................";
+      position: absolute;
+      z-index: 0;
+      display: block;
+      width: inherit;
+      height: auto;
+      font-size: 10px;
+      letter-spacing: 4.7px;
+      top: 83px;
+      left: 0;
+      color: $color-summer-sky;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &[data-aos="advantages-title-anim"] {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transform: translate3d(0, -5px, 0);
+    &.aos-animate {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+
+  & > span {
+    position: relative;
+    color: $color-default-white;
+
+    &[data-aos="advantages-span-anim"] {
+      // clip-path: inset(0 calc(100% + 300px) 0 0);
+      &::after {
+        max-width: 0%;
+        transition: max-width 0.3s;
+        transition-delay: 0.6s;
+      }
+
+      &.aos-animate {
+        // clip-path: inset(0 -100px 0 -25px);
+        &::after {
+          max-width: calc(100% + 30px);
+
+          @include vp-1919 {
+            max-width: calc(100% + 20px);
+          }
+
+          @include vp-767 {
+            max-width: calc(100% + 14px);
+          }
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: -15px;
+      top: 50%;
+      display: block;
+      box-sizing: content-box;
+      width: calc(100% + 30px);
+      max-width: 0%;
+      height: 1em;
+      padding: 4px 0px;
+      background-color: $color-summer-sky;
+      border-radius: 10px;
+      transform: skew(-12deg) translate3d(-2px, calc(-50% + 2px), 0);
+      transition-property: max-width;
+
+      @include vp-1919 {
+        left: -10px;
+
+        width: calc(100% + 20px);
+        padding: 5px 0;
+        transform: skew(-12deg) translate3d(-3px, calc(-50% + 4px), 0);
+      }
+
+      @include vp-1023 {
+        padding: 7px 0;
+        transform: skew(-12deg) translate3d(-5px, calc(-50% + 3px), 0);
+      }
+
+      @include vp-767 {
+        left: -7px;
+
+        width: calc(100% + 14px);
+        padding: 5px 0;
+        border-radius: 10px;
+        transform: skew(-12deg) translate3d(0, calc(-50% + 3px), 0);
+      }
+    }
+  }
+
+  @include vp-1919 {
+    font-size: 38px;
+    line-height: 42px;
+    min-width: 430px;
+    margin-left: 8px;
+    margin-right: 72px;
+  }
+
+  @include vp-1439 {
+    font-size: 30px;
+    line-height: 33px;
+    min-width: 295px;
+    margin: 0;
+    margin-right: 53px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 28px;
+    width: 235px;
+    min-width: 235px;
+    margin: 0;
+    margin-bottom: 22px;
+  }
+}
+
+.advantages__text {
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 26px;
+
+  @include vp-1919 {
+    margin-bottom: 13px;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 22px;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 75px;
+  margin-top: 177px;
+
+  @include vp-1919 {
+    margin-right: 0;
+    margin-top: 185px;
+  }
+
+  @include vp-1023 {
+    margin: 0;
+    margin-top: 145px;
+    margin-right: -24px;
+    padding: 0;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    margin-top: 74px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  & li {
+    display: flex;
+    width: calc(100% / 3);
+    margin-bottom: 70px;
+
+    @include vp-767 {
+      width: 100%;
+      margin-bottom: 52px;
+    }
+  }
+}
+
+.advantages .container {
+  padding: 0 60px;
+  margin-top: -2px;
+
+  & > :first-child {
+    display: flex;
+    padding-left: 30px;
+    position: relative;
+
+    @include vp-1919 {
+      padding-left: 0;
+    }
+
+    @include vp-1023 {
+      & .advantages__button {
+        position: absolute;
+        top: 127px;
+        left: auto;
+        transform: translateX(-126%);
+      }
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      align-items: flex-start;
+
+      & .advantages__button{
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 20px;
+        line-height: 24px;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @include vp-1919 {
+    padding: 0 122px;
+    margin-top: 0;
+  }
+
+  @include vp-1439 {
+    padding: 0 25px;
+  }
+
+  @include vp-767 {
+    padding: 0 10px;
+  }
+}

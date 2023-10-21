@@ -1,0 +1,21 @@
+mixin partners(data)
+  section.partners(id=data.id)&attributes(attributes)
+    .container
+      .partners__text-content
+        h2.partners__title!= data.title
+        if data.desc
+          p.partners__description!= data.desc
+      .partners__slider.swiper
+        .partners__slider-wrapper.swiper-wrapper
+          each item in data.list
+            .partners__slide.swiper-slide
+              .partners__image-background
+              .partners__image
+                a(href!=item.href)
+                  +picture("content/partners", `partners-image-${item.image}`, "png", item.width, item.height, item.image)
+              if item.slideTitle
+                p.partners__slide-title!= item.slideTitle
+                p.partners__slide-text!= item.text
+      .partners__pagination.swiper-pagination
+      .partners__button.partners__button--next.swiper-button-next
+      .partners__button.partners__button--prev.swiper-button-prev

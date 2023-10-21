@@ -1,0 +1,96 @@
+.scanner-card {
+  position: relative;
+}
+
+.scanner-card:nth-child(2) {
+  @include vp-767 {
+    grid-row-start: 3;
+  }
+}
+
+.scanner-card:nth-child(3) {
+  @include vp-767 {
+    grid-row-start: 2;
+  }
+}
+
+
+.scanner-card__image {
+  left: -107px;
+  top: -9px;
+  width: 91px;
+  height: 59px;
+  border-radius: 400px;
+  position: absolute;
+
+  @include vp-767 {
+    width: 40px;
+    height: 62px;
+    left: -69px;
+    top: -6px;
+  }
+}
+
+.scanner-card__image--red {
+  background-color: $color-cinnabar;
+  transform: rotate(45deg);
+
+  @include vp-767 {
+    transform: rotate(-45deg);
+  }
+}
+
+.scanner-card__image--grey {
+  background-color: $color-grey;
+  transform: rotate(-45deg);
+
+  @include vp-767 {
+    transform: rotate(45deg);
+  }
+}
+
+.scanner-card__image--blue {
+  background-color: $color-summer-sky;
+  transform: rotate(-45deg);
+
+  @include vp-767 {
+    transform: rotate(45deg);
+  }
+}
+
+.scanner-card__image--black {
+  background-color: $color-night-rider;
+  transform: rotate(45deg);
+
+  @include vp-767 {
+    transform: rotate(-45deg);
+  }
+}
+
+
+.scanner-card__text-wrapper {
+  max-width: 220px;
+
+  @include vp-1023 {
+    max-width: 300px;
+  }
+
+  @include vp-767 {
+    max-width: 358px;
+  }
+}
+
+.scanner-card:first-child .scanner-card__text-wrapper {
+  max-width: 213px;
+
+  @include vp-767 {
+    max-width: 290px;
+    padding-right: 10px;
+  }
+}
+
+.scanner-card__text {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0;
+}

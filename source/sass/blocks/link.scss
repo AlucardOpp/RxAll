@@ -1,0 +1,38 @@
+.link {
+  position: relative;
+  display: inline;
+  font-size: 16px;
+  line-height: 20px;
+  transition: opacity $trans-default;
+
+  & > span {
+    position: relative;
+  }
+
+  @include vp-1919 {
+    max-width: 90%;
+  }
+
+  &--blue {
+    color: $color-summer-sky;
+  }
+
+  &__icon--right {
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    transform: translateX(100%);
+  }
+
+  &__icon--left {
+    vertical-align: -0.28em;
+    margin-right: 10px;
+  }
+
+  @include hover {
+    &:hover,
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}

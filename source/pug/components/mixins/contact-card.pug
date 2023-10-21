@@ -1,0 +1,9 @@
+mixin contact-card(data)
+  each item in data.cardData
+    .contact-card(class=item.class data-aos="fade-up" data-aos-delay=item.delay)
+      p.contact-card__header!=item.header
+      p.contact-card__text!=item.text
+      p.contact-card__managment!=item.managment
+        span!=item.managmentSpan
+      p.contact-card__questions!=item.questions
+        span!=item.questionsSpan

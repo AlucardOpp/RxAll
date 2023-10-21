@@ -1,0 +1,375 @@
+.case-card {
+  margin-top: 57px;
+  padding: 50px;
+  padding-right: 30px;
+  padding-bottom: 43px;
+  border-radius: 50px;
+
+  @include vp-1919 {
+    margin-top: 58px;
+    padding-bottom: 50px;
+  }
+
+  @include vp-1023 {
+    margin-top: 18px;
+    padding: 30px 24px;
+    padding-bottom: 0;
+    padding-right: 0;
+    border-radius: 0;
+  }
+
+  @include vp-767 {
+    margin-top: 35px;
+    padding: 35px 10px;
+    padding-bottom: 30px;
+  }
+
+  & a.link {
+    position: relative;
+    bottom: 0;
+    margin-top: 14px;
+    margin-bottom: 36px;
+    display: inline-flex;
+    align-items: center;
+
+    &--hidden {
+      display: none;
+    }
+
+    @include vp-1919 {
+      margin-bottom: 34px;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 30px;
+    }
+
+    @include vp-767 {
+      margin: 0;
+    }
+  }
+}
+
+.case-card.case-card--government {
+  margin-top: 38px; //PP
+
+  @include vp-1919 {
+    margin-top: 40px;
+  }
+
+  @include vp-1023 {
+    margin-top: 18px;
+  }
+
+  @include vp-767 {
+    margin-top: 33px;
+    padding: 35px 10px;
+    padding-bottom: 30px;
+  }
+
+  & div.case-card__content {
+    margin-bottom: -2px;
+
+    @include vp-767 {
+      margin: 0;
+    }
+
+    & p {
+      margin-bottom: 26px;
+    }
+  }
+
+  & div.case-card__footer {
+    margin-top: 0; //PP
+    padding-top: 32px;
+
+    @include vp-767 {
+      padding: 0;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.case-card.case-card--hospitals .case-card__content .column:nth-child(2n) {
+  margin-right: -10px; //PP
+}
+
+.case-card__content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin-bottom: 0;
+  margin-right: -65px; //PP
+  height: 100px;
+  padding-bottom: 0;
+  overflow: hidden;
+
+
+  @include vp-1919 {
+    grid-gap: 10px;
+    margin-right: 10px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-right: 0;
+    height: auto;
+  }
+
+  & p {
+    margin: 0;
+    margin-bottom: 33px;
+    padding-right: 0;
+    font-size: 16px;
+    line-height: 26px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include vp-767 {
+      height: 75px;
+      padding: 0;
+      margin-bottom: 21px;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+    }
+  }
+
+  &--rolled-up {
+    height: auto;
+
+    & p {
+      display: block;
+    }
+
+    @include vp-1919 {
+      & p {
+        padding-right: 20px;
+      }
+    }
+
+    @include vp-1023 {
+      & ~ .case-card__footer {
+        display: block;
+      }
+    }
+
+    @include vp-767 {
+      & p {
+        height: auto;
+      }
+    }
+  }
+}
+
+.case-card__content .column > div {
+  position: relative;
+
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.case-card__content .column:nth-child(2n - 1) p {
+  padding-right: 26px;
+
+  @include vp-1919 {
+    padding-right: 40px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    margin-bottom: 18px;
+  }
+}
+
+.case-card__content .column:nth-child(2n) p {
+  margin-right: 70px;
+  padding-right: 5px; //PP
+
+  @include vp-1919 {
+    margin-right: 0;
+    padding-right: 15px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.case-card__footer {
+  position: relative;
+  padding-top: 23px;
+  overflow: hidden;
+
+  @include vp-1919 {
+    padding-top: 30px;
+  }
+
+  @include vp-1023 {
+    display: none;
+    padding-bottom: 32px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    padding-bottom: 5px;
+  }
+
+  &::after {
+    content: ".................................................................................................................................................................................................................................................................................................................................................................................................................................";
+    position: absolute;
+    z-index: 0;
+    letter-spacing: 4.7px;
+    top: -15px;
+    left: -1px;
+    width: inherit;
+    height: auto;
+    color: $color-grey-opacity-01;
+    overflow: hidden;
+
+    @include vp-1919 {
+      top: -15px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  & > div {
+    position: relative;
+  }
+
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  @include vp-1919 {
+    & h4 {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.case-card__footer > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 37px;
+  padding: 0;
+  margin-top: 20px;
+  list-style: none;
+
+  @include vp-1919 {
+    grid-gap: 95px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  & b {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 600;
+  }
+
+  & p {
+    margin: 0;
+    line-height: 26px;
+    padding-right: 50px;
+
+    @include vp-1919 {
+      padding-right: 0;
+    }
+  }
+
+  & li:nth-child(3) {
+    padding-left: 10px; //PP
+
+    @include vp-1919 {
+      padding-left: 3px;
+    }
+  }
+}
+
+.case-card h3 {
+  margin: 0;
+  margin-bottom: 26px;
+  font-size: 30px;
+  line-height: 37px;
+  color: $color-night-rider;
+
+  @include vp-1919 {
+    margin-bottom: 29px;
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 34px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+
+  & span {
+    font-weight: 300;
+    letter-spacing: -0.2px;
+
+    @include vp-1919 {
+      font-weight: 400;
+    }
+
+    @include vp-1023 {
+      font-weight: 300;
+    }
+  }
+}
+
+.case-card h4 {
+  margin: 0;
+  margin-bottom: 18px;
+  padding-left: 48px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 600;
+  color: $color-night-rider;
+
+  @include vp-767 {
+    margin-bottom: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  & svg.only-desktop {
+    display: flex;
+  }
+
+  & svg.only-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  & svg.only-desktop {
+    display: none;
+  }
+
+  & svg.only-mobile {
+    display: flex;
+  }
+}

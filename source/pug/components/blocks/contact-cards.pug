@@ -1,0 +1,9 @@
+mixin contact-cards(data)
+  section.contact-cards(class!=attributes.class)
+    .container
+      ul.contact-cards__list
+        each item, index in contactContent.content
+          +contact-element(item)(class=item.class)
+            +contact-card(contactContent.cardsContent[index])
+
+

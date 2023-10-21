@@ -1,0 +1,30 @@
+mixin intro-scanner()
+  section.intro-scanner
+    .container
+      .intro-scanner__container
+        .intro-scanner__title-container(data-aos="fade-right")
+          +picture("content/intro-scanner", "logo-scanner", "png", 132, 105, "RxAll logo")
+          h1.intro-scanner__title #[span.visually-hidden!="Rx"] Scanner
+        p.intro-scanner__subtitle(data-aos="fade-right" data-aos-delay="500") digital solution #[span(data-aos="fade-right" data-aos-delay="600")!="to&nbsp;fight fake drugs"]
+        p.intro-scanner__description(data-aos="fade-right" data-aos-delay="700")!="Multiple-Award Winning Healthcare IoT Platform"
+        .intro-scanner__buttons(data-aos="fade-right" data-aos-delay="800")
+          a.intro-scanner__button.intro-scanner__button--demo.btn.btn--sky(href="#form" data-trigger="#form" aria-label="Go to product demo")
+            +icon("icon-power", 20, 22)
+            span!="Get a product demo"
+          button.intro-scanner__button.intro-scanner__button--works.btn.btn--transparent(type="button" data-open-modal="video-2" aria-label="Show video")
+            +icon("icon-play", 20, 20)
+            span!="How it works"
+        ul.intro-scanner__list
+          li.intro-scanner__item(data-aos="fade" data-aos-delay="900")
+            p.intro-scanner__item-title!="Portable and easy"
+            p.intro-scanner__item-description!="To&nbsp;use by&nbsp;anyone"
+          li.intro-scanner__item(data-aos="fade" data-aos-delay="1000")
+            p.intro-scanner__item-title!="ISO, CE&nbsp;certified"
+            p.intro-scanner__item-description!="99% accuracy"
+          li.intro-scanner__item(data-aos="fade" data-aos-delay="1100")
+            p.intro-scanner__item-title!="Real-time results"
+            p.intro-scanner__item-description!="On&nbsp;an&nbsp;IoS and Android app"
+    .intro-scanner__image
+      +picture("content/intro-scanner", "scanner", "png", 1251, 1214, "RxScanner image")
+    .intro-scanner__background.intro-scanner__background--1
+    .intro-scanner__background.intro-scanner__background--2

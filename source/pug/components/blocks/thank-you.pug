@@ -1,0 +1,10 @@
+mixin thank-you()
+  section.thank-you
+    .container
+      h1.thank-you__title!="Thank you!"
+      p.thank-you__description!="Your message has been sent! We&nbsp;will contact you shortly"
+      .thank-you__buttons
+        a(href="./index.html").thank-you__button.btn.btn--transparent
+          +icon("icon-btn-arrow-left", 16, 14)
+          span!="Go back"
+        +btn({text: "Main page", href: "./index.html"}).thank-you__button.btn--sky

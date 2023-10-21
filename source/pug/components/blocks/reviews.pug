@@ -1,0 +1,7 @@
+mixin reviews(data)
+  section.reviews(class!=attributes.class id="reviews")
+    h2.visually-hidden!="RxAll story"
+    .container
+      each item, index in reviewContent.content
+        +review-card(item)(class=item.class)
+

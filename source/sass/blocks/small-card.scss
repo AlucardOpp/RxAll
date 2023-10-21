@@ -1,0 +1,171 @@
+.small-card {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 103px;
+
+  @include vp-1919 {
+    margin-bottom: 70px;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  @include vp-767 {
+    min-height: 52px;
+  }
+}
+
+.small-card--hello {
+  margin-bottom: 87px;
+
+  @include vp-1919 {
+    margin-bottom: 70px;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
+}
+
+.small-card--catapult {
+  margin-bottom: 84px;
+
+  @include vp-1919 {
+    margin-bottom: 70px;
+  }
+
+  @include vp-1023 {
+    grid-column-start: 2;
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    grid-column-start: unset;
+    grid-row-start: unset;
+  }
+}
+
+.small-card--catapult .small-card__text-wrapper {
+  @include vp-1023 {
+    margin-top: 13px;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+  }
+}
+
+.small-card--cio {
+  @include vp-1023 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  @include vp-767 {
+    grid-column-start: unset;
+    min-height: 78px;
+  }
+}
+
+.small-card__image {
+  @include vp-1023 {
+    flex-shrink: 0;
+  }
+}
+
+.small-card__image img {
+  @include vp-1023 {
+    position: absolute;
+    top: -5px;
+    left: -140px;
+  }
+
+  @include vp-767 {
+    top: -2px;
+    left: -120px;
+  }
+}
+
+.small-card__image--hello img {
+  @include vp-1023 {
+    left: -81px;
+  }
+
+  @include vp-767 {
+    top: -2px;
+    left: -102px;
+  }
+}
+
+.small-card__image--catapult img {
+  @include vp-1023 {
+    left: -65px;
+    top: 9px;
+  }
+
+  @include vp-767 {
+    top: -2px;
+    left: -87px;
+  }
+}
+
+.small-card__image--cio img {
+  @include vp-1023 {
+    left: -154px;
+    top: 18px;
+  }
+
+  @include vp-767 {
+    top: 17px;
+    left: -132px;
+  }
+}
+
+.small-card__text-wrapper {
+  padding-left: 62px;
+  max-width: 320px;
+
+  @include vp-1919 {
+    padding-left: 42px;
+    max-width: 300px;
+  }
+
+  @include vp-1023 {
+    padding-left: 0;
+    max-width: 215px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1250px) {
+  .small-card__text-wrapper {
+    max-width: 250px;
+  }
+}
+
+.small-card__text {
+  margin: 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: $color-grey;
+
+  @include vp-1023 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 100%;
+    letter-spacing: -0.2px;
+  }
+}
+

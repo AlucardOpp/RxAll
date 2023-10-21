@@ -1,0 +1,35 @@
+mixin needs()
+  section.needs#form
+    .container
+      h2.needs__title!="Order now"
+      .needs__container
+        p.needs__subtitle!="Tell&nbsp;us about your needs"
+        .needs__form(data-validate data-callback="customExample")
+          form(id="order-now", action="#")
+            .needs__inputs
+              .needs__inputs-container.needs__inputs-container--name
+                .needs__input.needs__input--name
+                  +custom-input({inputLabel: "Name", inputType: "text", inputName: "needs-user-name", inputId: "needs-user-name", inputPlaceholder: "First name", inputError: "please check again"})(data-validate-type="text" data-limitations="letters")
+              .needs__inputs-container
+                .needs__input
+                  +custom-input({inputLabel: "Phone", inputType: "tel", inputName: "needs-user-phone", inputId: "needs-user-phone", inputPlaceholder: "1-877-378-4100", inputError: "please check again", inputMinLength: 7, inputMaxLength: 20})(data-validate-type="simple-phone")
+                .needs__input
+                  +custom-input({inputLabel: "E-mail", inputType: "email", inputName: "needs-user-email", inputId: "needs-user-email", inputPlaceholder: "name@domain.com", inputError: "please check again"})(data-validate-type="email")
+              .needs__inputs-container
+                .needs__input
+                  +custom-input({inputLabel: "Where are you from", inputType: "text", inputName: "needs-user-from", inputId: "needs-user-from", inputPlaceholder: "Enter your country/region", inputError: "please check again"})(data-validate-type="text")
+                .needs__input
+                  +custom-input({inputLabel: "How many units do you need?", inputType: "number", inputName: "needs-user-units", inputId: "needs-user-units", inputPlaceholder: "Specify the number", inputError: "please check again"})(data-validate-type="text")
+            p.needs__subtitle.needs__subtitle--reason!="Why are you buying RxAll's devices?"
+            .needs__radios
+              .needs__radio
+                +custom-toggle({inputLabel: "For big pharma use", inputName: "needs-reason", inputId: "big-pharma", inputType: "radio", inputValue: "big-pharma"}).custom-toggle--radio
+              .needs__radio
+                +custom-toggle({inputLabel: "For pharma/hospital use", inputName: "needs-reason", inputId: "pharma-hospital", inputType: "radio", inputValue: "pharma-hospital", inputChecked: true}).custom-toggle--radio
+              .needs__radio
+                +custom-toggle({inputLabel: "For regulators/NGOs use", inputName: "needs-reason", inputId: "regluators-ngos", inputType: "radio", inputValue: "regluators-ngos"}).custom-toggle--radio
+            button.btn.btn--sky.needs__button(type="submit" aria-label="Submit form")
+              +icon("icon-btn-arrow-right", 16, 14)
+              span!="Order now"
+      .needs__image
+        +picture("content/needs", "needs-image", "png", 952, 1149, "Device")

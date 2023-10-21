@@ -1,0 +1,381 @@
+.partners {
+  margin-bottom: 114px;
+
+  @include vp-1919 {
+    margin-bottom: 159px;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 88px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 56px;
+  }
+
+  & .container {
+    position: relative;
+  }
+
+  &__slide {
+    border-radius: 70px;
+
+    @include vp-767 {
+      width: 224px;
+    }
+  }
+
+  &__slider {
+    max-width: 1415px;
+    padding: 6px 0 0 0;
+
+    @include vp-1919 {
+      max-width: 1165px;
+    }
+
+    @include vp-1439 {
+      max-width: none;
+    }
+
+    @include vp-767 {
+      overflow: visible;
+    }
+  }
+
+  &__button {
+    &.swiper-button-next,
+    &.swiper-button-prev {
+      top: auto;
+      bottom: 187px;
+      margin-top: 0;
+      width: 44px;
+      height: 44px;
+      background-color: $color-default-white;
+      border: 1px solid $color-grey;
+      border-radius: 50%;
+      transition: opacity $trans-default;
+      -webkit-tap-highlight-color: $color-transparent;
+      outline: none;
+
+      @include vp-1919 {
+        bottom: 159px;
+      }
+
+      @include vp-1439 {
+        display: none;
+      }
+
+      @include hover {
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      @include expand-interactive-area(150%, 150%);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 13px;
+        width: 16px;
+        height: 16px;
+        border-top: 2px solid $color-grey;
+        border-right: 2px solid $color-grey;
+      }
+    }
+
+    &--next {
+      right: 6px;
+
+      @include vp-1919 {
+        right: 51px;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        left: 10px;
+      }
+    }
+
+    &--prev {
+      left: -7px;
+
+      @include vp-1919 {
+        left: 51px;
+      }
+
+      &::after {
+        transform: rotate(-135deg);
+        left: 16px;
+      }
+    }
+  }
+
+  &__pagination.swiper-pagination {
+    position: relative;
+    bottom: 0;
+
+    @include vp-767 {
+      display: none;
+    }
+
+    & .swiper-pagination-bullet {
+      width: 18px;
+      height: 18px;
+      background-color: $color-alice-blue-2;
+      opacity: 1;
+      position: relative;
+      transition: opacity $trans-default;
+      margin: 0 8px;
+      outline: none;
+      -webkit-tap-highlight-color: $color-transparent;
+
+      @include vp-1023 {
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+      }
+
+      @include hover {
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      @include expand-interactive-area(150%, 150%);
+
+      &-active {
+        background-color: $color-summer-sky;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__slider-wrapper {
+    margin-bottom: 54px;
+
+    @include vp-1919 {
+      margin-bottom: 42px;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 20px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text-content {
+    margin-left: 50px;
+
+    @include vp-1439 {
+      margin-left: 0;
+    }
+  }
+
+  &__image-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 270px;
+    background-color: rgba($color-pattens-blue, 0.5);
+    border-radius: 70px;
+    transform: rotate(-3deg);
+    z-index: -1;
+
+    @include vp-1919 {
+      height: 228px;
+    }
+
+    @include vp-1023 {
+      height: 139px;
+      border-radius: 40px;
+    }
+
+    @include vp-767 {
+      width: 224px;
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 270px;
+    background-color: $color-default-white;
+    border: 1px solid $color-alice-blue-2;
+    border-radius: 70px;
+    user-select: none;
+
+    @include vp-1919 {
+      height: 228px;
+    }
+
+    @include vp-1023 {
+      height: 139px;
+      border-radius: 40px;
+    }
+
+    @include vp-767 {
+      width: 224px;
+    }
+
+
+    & img {
+      max-width: 325px;
+      max-height: 205px;
+      width: auto;
+      object-fit: cover;
+
+      @include vp-1919 {
+        max-width: 252px;
+        max-height: 160px;
+      }
+
+      @include vp-1023 {
+        max-width: 156px;
+        max-height: 99px;
+      }
+
+      @include vp-767 {
+        max-width: 127px;
+        max-height: 80px;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 110%;
+    color: $color-night-rider;
+    margin: 0 0 14px 0;
+
+    @include vp-1919 {
+      font-size: 38px;
+      margin-bottom: 18px;
+    }
+
+    @include vp-1439 {
+      font-size: 30px;
+      margin-bottom: 11px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__description {
+    max-width: 653px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    color: $color-night-rider;
+    margin: 0 0 58px 0;
+
+    @include vp-1919 {
+      margin-bottom: 55px;
+    }
+
+    @include vp-1439 {
+      margin-bottom: 31px;
+    }
+
+    @include vp-1023 {
+      max-width: 643px;
+    }
+
+    @include vp-767 {
+      max-width: none;
+      margin-bottom: 19px;
+    }
+  }
+
+  &--text {
+    margin-bottom: 94px;
+
+    @include vp-1919 {
+      margin-top: -86px;
+      margin-bottom: 40px;
+    }
+
+    @include vp-1023 {
+      margin-top: unset;
+      margin-bottom: 42px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 32px;
+    }
+
+    .partners__title {
+      margin-bottom: 54px;
+    }
+
+    .partners__button {
+      top: 224px;
+      bottom: unset;
+
+      @include vp-1919 {
+        top: 184px;
+      }
+    }
+  }
+
+  &__slide-title {
+    margin: 0;
+    margin-top: 26px;
+    margin-bottom: 16px;
+    padding-left: 7%;
+    padding-right: 3%;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 600;
+
+    @include vp-1919 {
+      padding-right: 0;
+      font-size: 20px;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 6px;
+      padding-left: 10.5%;
+      font-size: 18px;
+    }
+
+    @include vp-767 {
+      display: -webkit-box;
+      width: 75%;
+      margin-top: 20px;
+      padding-left: 12px;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  &__slide-text {
+    display: -webkit-box;
+    margin: 0;
+    padding-left: 6%;
+    line-height: 1.6;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @include vp-1023 {
+      padding-left: 10.5%;
+    }
+
+    @include vp-767 {
+      width: 70%;
+      padding-left: 12px;
+    }
+  }
+}

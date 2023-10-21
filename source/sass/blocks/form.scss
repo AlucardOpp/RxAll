@@ -1,0 +1,433 @@
+.form {
+  position: relative;
+  padding-top: 138px;
+  padding-bottom: 295px;
+
+  @include vp-1919 {
+    padding-top: 84px;
+    padding-bottom: 200px;
+  }
+
+  @include vp-1023 {
+    padding-top: 75px;
+  }
+
+  @include vp-1023 {
+    padding-bottom: 150px;
+  }
+
+  @include vp-767 {
+    padding-top: 37px;
+    padding-bottom: 100px;
+  }
+
+  .container {
+    position: relative;
+
+    @include vp-1919 {
+      position: unset;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.3%;
+    padding-left: 3.3%;
+    padding-right: 3.3%;
+
+    @include vp-1919 {
+      grid-template-columns: 48% 1fr;
+      grid-gap: 1%;
+      padding-left: 6.2%;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: 48.6% 1fr;
+      grid-gap: 13%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      grid-gap: 77px;
+    }
+  }
+
+  &__block {
+    padding-right: 41%;
+
+    @include vp-1919 {
+      padding-right: 25%;
+    }
+
+    @include vp-1023 {
+      padding-right: 0;
+    }
+  }
+
+  &__box {
+    padding-right: 33%;
+
+    @include vp-1919 {
+      padding-right: 13%;
+    }
+
+    @include vp-1023 {
+      padding-right: 0;
+    }
+
+    @include vp-767 {
+      padding-left: 1px;
+    }
+  }
+
+  &__title,
+  &__box-title {
+    margin: 0 0 18px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    @include vp-1919 {
+      margin-bottom: 39px;
+      font-size: 38px;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 19px;
+      font-size: 30px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text,
+  &__box-text {
+    margin: 0;
+    line-height: 1.6;
+
+    @include vp-1023 {
+      width: 80%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__box-text {
+    margin-bottom: 58px;
+
+    @include vp-1919 {
+      margin-bottom: 40px;
+    }
+
+    @include vp-1023 {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 38px;
+    }
+  }
+
+  &__submit,
+  &__box-btn {
+    position: relative;
+    background-color: $color-summer-sky;
+    margin: 0;
+    padding: 19px 26px 19px 51px;
+    border-radius: 17px;
+    transition: opacity $trans-default;
+    will-change: opacity;
+
+    @include vp-767 {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 26px;
+      margin: auto 0;
+      fill: $color-default-white;
+
+      @include vp-767 {
+        left: 50%;
+        margin-left: -39px;
+      }
+    }
+  }
+
+  &__box-btn {
+    padding-left: 55px;
+
+    svg {
+      @include vp-767 {
+        margin-left: -91px;
+      }
+    }
+  }
+
+  &__fields {
+    margin-top: 49px;
+
+    @include vp-1919 {
+      margin-top: 30px;
+    }
+
+    @include vp-1023 {
+      margin-top: 16px;
+    }
+
+    @include vp-767 {
+      margin-top: 31px;
+      padding-left: 4px;
+    }
+  }
+
+  .custom-input {
+    margin-bottom: 27px;
+
+    @include vp-767 {
+      margin-bottom: 16px;
+    }
+  }
+
+  label textarea {
+    padding-top: 23px;
+    padding-bottom: 4px;
+    transition: border $trans-default;
+
+    @include vp-767 {
+      padding-top: 21px;
+      padding-bottom: 2px;
+      padding-right: 18px;
+    }
+  }
+
+  .custom-textarea {
+    margin-bottom: 40px;
+
+    @include vp-1023 {
+      margin-bottom: 28px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 22px;
+    }
+
+    &.is-invalid textarea {
+      border: 1px solid $color-cinnabar;
+    }
+  }
+
+  &__pattern {
+    position: absolute;
+    bottom: -826px;
+    right: -76%;
+    width: 2014px;
+    height: 650px;
+    background-color: rgba($color-grey, 0.2);
+    transform: rotate(45deg);
+    border-radius: 400px;
+
+    @include vp-1919 {
+      bottom: -325px;
+      right: -52.5%;
+      width: 105%;
+      height: 30.5vw;
+    }
+
+    @include vp-1439 {
+      bottom: -315px;
+    }
+
+    @include vp-1023 {
+      bottom: -130px;
+      right: -277px;
+      width: 652px;
+      height: 344px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.form--contacts {
+  @include vp-1919 {
+    & .form__pattern {
+      bottom: -325px;
+    }
+  }
+
+  @include vp-1439 {
+    & .form__pattern {
+      bottom: -315px;
+    }
+  }
+
+  @include vp-1023 {
+    & .form__pattern {
+      bottom: -130px;
+    }
+  }
+
+  @include vp-1023 {
+    padding-top: 74px;
+  }
+}
+
+.form--contacts .form__wrap {
+  @include vp-1919 {
+    grid-template-columns: 44% 1fr;
+  }
+
+  @include vp-1023 {
+    grid-template-columns: 49% 1fr;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form--contacts .form__block {
+  @include vp-1919 {
+    margin-left: -5px;
+    padding-right: 19%;
+  }
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+
+  @include vp-1023 {
+    padding-right: 0;
+  }
+}
+
+
+.form--contacts .form__pattern {
+  bottom: -927px;
+}
+
+.form--contacts .form__title,
+.form--contacts .form__box-title {
+  margin-bottom: 38px;
+
+  @include vp-1919 {
+    margin-bottom: 40px;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 19px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 16px;
+  }
+}
+.form--contacts .form__title {
+  @include vp-1023 {
+    letter-spacing: 0.1px
+  }
+}
+
+.form--contacts .form__fields {
+  margin-top: 35px;
+
+  @include vp-1919 {
+    margin-top: 36px;
+  }
+
+  @include vp-1023 {
+    margin-top: 21px;
+    margin-left: 0;
+  }
+
+  @include vp-767 {
+    margin-top: 14px;
+  }
+}
+
+.form--contacts .form__text,
+.form--contacts .form__box-text {
+  font-size: 16px;
+  line-height: 26px;
+  font-style: normal;
+  font-weight: 400;
+
+  @include vp-767 {
+    letter-spacing: -1px;
+  }
+}
+
+.form--contacts .form__text {
+  letter-spacing: -0.2px;
+
+  @include vp-1023 {
+    width: 83%;
+  }
+
+  @include vp-767 {
+    letter-spacing: unset;
+    width: 100%;
+  }
+}
+
+.form--contacts .form__box {
+  margin-left: 50px;
+  padding-right: 11%;
+
+  @include vp-1919 {
+    margin-left: 47px;
+  }
+
+  @include vp-1023 {
+    margin-left: -1px;
+    letter-spacing: -0.7px;
+  }
+
+  @include vp-767 {
+    padding-right: unset;
+  }
+}
+
+.form--contacts .form__box-text {
+  margin-bottom: 44px;
+  padding-right: 12px;
+
+  @include vp-1919 {
+    margin-bottom: 43px;
+  }
+
+  @include vp-1023 {
+    width: 100%;
+    margin-bottom: 25px;
+    padding-right: 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 24px;
+    letter-spacing: 0.2px;
+  }
+}

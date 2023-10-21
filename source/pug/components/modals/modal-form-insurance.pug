@@ -1,0 +1,32 @@
+mixin modal-form-insurance()
+  .modal-form
+    h2.modal-form__title!="Insurance"
+    p.modal-form__description!="Partner to&nbsp;provide financing to&nbsp;insured patients"
+    ul.modal-form__list
+      li.modal-form__item
+        +icon("icon-check-mark", 20, 20)
+        span!="Credit <br> facilities"
+      li.modal-form__item
+        +icon("icon-check-mark", 20, 20)
+        span!="Instant <br> approval"
+      li.modal-form__item
+        +icon("icon-check-mark", 20, 20)
+        span!="Network of trusted <br> care providers"
+    .modal-form__form(data-validate)
+      form(action="#")
+        .modal-form__inputs
+          .modal-form__input
+            +custom-input({inputLabel: "Name", inputType: "text", inputName: "insurance-user-name", inputId: "insurance-user-name", inputPlaceholder: "First name", inputError: "please check again"})(data-validate-type="text" data-limitations="letters")
+          .modal-form__input
+            +custom-input({inputLabel: "E-mail", inputType: "email", inputName: "insurance-user-email", inputId: "insurance-user-email", inputPlaceholder: "name@domain.com", inputError: "please check again"})(data-validate-type="email")
+          .modal-form__input
+            +custom-input({inputLabel: "Phone", inputType: "tel", inputName: "insurance-user-tel", inputId: "insurance-user-tel", inputPlaceholder: "1-877-378-4100", inputError: "please check again", inputMinLength: 7, inputMaxLength: 20})(data-validate-type="simple-phone")
+          .modal-form__input
+            +custom-input({inputLabel: "Company", inputType: "text", inputName: "insurance-user-company", inputId: "insurance-user-company", inputPlaceholder: "Company name", inputError: "please check again"})(data-validate-type="text")
+          .modal-form__input
+            +custom-input({inputLabel: "City", inputType: "text", inputName: "insurance-user-city", inputId: "insurance-user-city", inputPlaceholder: "Enter your city", inputError: "please check again"})(data-validate-type="text")
+          .modal-form__input
+            +custom-input({inputLabel: "Country", inputType: "text", inputName: "insurance-user-country", inputId: "insurance-user-country", inputPlaceholder: "Enter your country/region", inputError: "please check again"})(data-validate-type="text")
+        button.btn.btn--sky.modal-form__button(type="submit" aria-label="Submit form")
+          +icon("icon-btn-arrow-right", 16, 14)
+          span!="Make inquiry"

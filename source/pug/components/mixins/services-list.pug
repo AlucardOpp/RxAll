@@ -1,0 +1,19 @@
+mixin services-list(mod)
+  if (mod === "service")
+    ul.services-list.services-list--mixed(class="services-list--" + mod)
+      each card, index in servicesList1.servicesCards
+        li
+          +services-card(card, mod)
+  if (mod === "advantages")
+    ul.services-list.services-list--simple(class="services-list--" + mod)
+      each card, index in servicesList2
+        li
+          +services-card(card, mod)
+  if (mod === "for-buyers")
+    +services-card(servicesList3.clientCard, "for-buyers").services-card--outside
+    ul.services-list.services-list--glued(class="services-list--" + mod)
+      li.mobile-only
+        +services-card(servicesList3.clientCard, "for-buyers")
+      each card, index in servicesList3.servicesCards
+        li
+          +services-card(card, mod)

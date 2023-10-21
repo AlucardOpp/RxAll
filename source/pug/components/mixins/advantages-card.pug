@@ -1,0 +1,10 @@
+mixin advantages-card(data)
+  article.advantages-card&attributes(attributes)
+    h3.advantages-card__title!=data.title
+    p.advantages-card__text!=data.text
+    a.advantages-card__link.link.link--blue(href=data.link.href data-open-modal=(hasForms === true && data.link.text === "Make inquiry") ? "form-rxpay" : null)
+      | !{data.link.text}
+      +icon("icon-arrow-right", 15, 20).link__icon.link__icon--right
+    .advantages-card__icon
+      each icon, index in data.icons
+        +icon(icon.name, icon.width, icon.height)(class=(index === 0 ? "only-desktop " + icon.name : "only-mobile " + icon.name))

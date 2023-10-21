@@ -1,0 +1,27 @@
+mixin footer(footerMods)
+  footer.footer(class=footerMods)
+    .container
+      if(currentUrl === "index.html")
+        .footer__logo
+          a(aria-label="main page, rxall")
+            img(src="img/sprite/icon-logo.svg" width="106" height="52" alt="rxall logo")
+          p RxAll&nbsp;©&nbsp;2022
+      else
+        .footer__logo
+          a(href="index.html", aria-label="go to main page")
+            img(src="img/sprite/icon-logo.svg" width="106" height="52" alt="rxall logo")
+          p RxAll&nbsp;©&nbsp;2022
+      .footer__links
+        each list in footerLinks
+          div
+            h3=list.listName
+            ul
+              each link in list.items
+                li
+                  if (list.listName === "Company")
+                    a(href=link.href)!=link.name
+                  else
+                    if(currentUrl === "index.html")
+                      a(href=link.href data-trigger=link.href)!=link.name
+                    else
+                      a(href=`./index.html${link.href}`)!=link.name

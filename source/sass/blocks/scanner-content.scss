@@ -1,0 +1,16 @@
+.scanner-content {
+  margin-bottom: 200px;
+
+  @include vp-1919 {
+    margin-bottom: 160px;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 50px;
+    // margin-top: 60px;
+  }
+}

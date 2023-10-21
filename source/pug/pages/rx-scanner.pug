@@ -1,0 +1,39 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "RxAll" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const hasForms = true
+
+block main
+  main
+    +intro-scanner()
+    +drugs(drugsContent)
+    +cases-content(cases)
+    +technology()
+    +needs()
+
+block modals
+  +modal("modal--video modal--video-1")(data-modal="video-1")
+    +modal-video-1()
+  +modal("modal--video modal--video-2")(data-modal="video-2")
+    +modal-video-2()
+  +modal("modal--form modal--form-rxpay")(data-modal="form-rxpay")
+    +modal-form-rxpay()
+  +modal("modal--form modal--form-rxpos")(data-modal="form-rxpos")
+    +modal-form-rxpos()
+  +modal("modal--form modal--form-government")(data-modal="form-government")
+    +modal-form-government()
+  +modal("modal--form modal--form-insurance")(data-modal="form-insurance")
+    +modal-form-insurance()
+  +modal("modal--form modal--form-lenders")(data-modal="form-lenders")
+    +modal-form-lenders()
+  +modal("modal--form modal--form-rxhmo")(data-modal="form-rxhmo")
+    +modal-form-rxhmo()
+  +modal("modal--success")(data-modal="success")
+    +modal-success()

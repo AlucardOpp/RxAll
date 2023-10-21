@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UI-kit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="RxAll">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest" crossorigin="use-credentials">
+    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/montserrat-black.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <style>
+        main {
+          margin-top: 100px;
+        }
+        
+        main > .container {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+        
+        .components-backwards {
+          color: #ffffff;
+          display: inline-block;
+        }
+        
+        .components-backwards span:first-child {
+          position: relative;
+          top: -3px;
+        
+          display: inline-block;
+          margin-right: 15px;
+        
+          font-size: 16px;
+          line-height: 24px;
+          vertical-align: top;
+        
+          transform: scale(2);
+        }
+        
+        .components-backwards span:last-child {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        
+        .components-backwards + h1 {
+          margin-bottom: 0;
+        }
+        
+        .container > section {
+          padding: 70px 0 0 0;
+        }
+        
+        section > h2 {
+          margin: 0 0 20px 0;
+          padding: 20px 0;
+          position: relative;
+          color: #ffffff;
+        }
+        
+        section > h2::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100vw;
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+          background-color: #2c39f2;
+          z-index: -1;
+        }
+        
+        .header-ui {
+          background-color: #2c39f2;
+          padding: 20px 0;
+          position: fixed;
+          width: 100vw;
+          z-index: 99;
+          box-shadow: 0 0 3px 1px #000000;
+        }
+        
+        .header-ui__nav {
+          display: grid;
+          grid-template-columns: max-content 1fr;
+          gap: 20px 80px;
+        }
+        
+        .header-ui__inner-list {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px 30px;
+        }
+        
+        .header-ui__inner-link {
+          color: #ffffff;
+          transition: color 0.3s ease;
+        }
+        
+        .header-ui__inner-link:hover,
+        .header-ui__inner-link.is-active {
+          color: #ff1553;
+        }
+        
+        .header-ui__inner-link.is-inactive {
+          color: #ffffff;
+          pointer-events: none;
+        }
+        
+      </style>
+      <header class="header-ui">
+        <nav class="header-ui__nav container"><a class="components-backwards" href="sitemap.html"><span>&larr;</span><span>вернуться на разводящую</span></a>
+          <ul class="header-ui__inner-list">
+            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#modals" data-navigation-link>Modals</a></li>
+            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#buttons" data-navigation-link>Buttons</a></li>
+            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#form-elements" data-navigation-link>Form elements</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="container">
+          <h1>UI-kit</h1>
+          <section id="modals">
+            <h2>Modals</h2>
+            <p>
+              <button class="btn" type="button" data-open-modal="success">modal-success
+              </button>
+            </p>
+            <p>
+              <button class="btn" type="button" data-open-modal="form-rxpay">modal-rxpay
+              </button>
+            </p>
+            <p>
+              <button class="btn" type="button" data-open-modal="form-rxpos">modal-rxpos
+              </button>
+            </p>
+            <p>
+              <button class="btn" type="button" data-open-modal="form-government">modal-government
+              </button>
+            </p>
+            <p>
+              <button class="btn" type="button" data-open-modal="form-insurance">modal-insurance
+              </button>
+            </p>
+            <p>
+              <button class="btn" type="button" data-open-modal="form-lenders">modal-lenders
+              </button>
+            </p>
+            <p>
+              <button class="btn" type="button" data-open-modal="form-rxhmo">modal-rxhmo
+              </button>
+            </p>
+            <p>
+              <button class="btn" type="button" data-open-modal="video-2">modal-video
+              </button>
+            </p>
+          </section>
+          <section id="buttons">
+            <h2>Buttons</h2>
+            <a class="btn" href="#">Текст
+            </a>
+            <p>Пример вызова</p><code>
+              <pre>+btn({text: "Текст", href: "#"})</pre></code>
+            <a class="btn btn--red" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="Просто ссылка">Текст
+            </a>
+            <p>Пример вызова</p><code>
+              <pre>+btn({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red</pre></code>
+            <button class="btn" type="button" disabled>Текст
+            </button>
+            <p>Пример вызова</p><code>
+              <pre>+btn({text: "Текст"})(disabled)</pre></code>
+          </section>
+          <section id="form-elements">
+            <h2>Form elements</h2>
+            <div data-validate>
+              <form method="post">
+                <div class="custom-input" data-validate-type="text" data-limitations="name">
+                  <label><span class="custom-input__label">Введите ваше имя</span>
+                    <input type="text" name="user-name" minlength="2">
+                  </label>
+                  <div class="custom-input__error">Не корректное имя</div>
+                </div>
+                <p>Пример вызова</p><code>
+                  <pre>+custom-input({inputLabel: "Введите ваше имя", inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")</pre></code>
+                <div class="custom-input" data-validate-type="phone">
+                  <label><span class="custom-input__label">Введите ваш телефон</span>
+                    <input type="tel" name="user-phone">
+                  </label>
+                  <div class="custom-input__error">Не корректный телефон</div>
+                </div>
+                <p>Пример вызова</p><code>
+                  <pre>+custom-input({inputLabel: "Введите ваш телефон", inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")</pre></code>
+                <div class="custom-input" data-validate-type="email">
+                  <label><span class="custom-input__label">Введите ваш email</span>
+                    <input type="email" name="user-email">
+                  </label>
+                  <div class="custom-input__error">Не корректный email</div>
+                </div>
+                <p>Пример вызова</p><code>
+                  <pre>+custom-input({inputLabel: "Введите ваш email", inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")</pre></code>
+                <div class="custom-textarea">
+                  <label><span class="custom-textarea__label">Расскажите о себе</span>
+                    <textarea name="user-info"></textarea>
+                  </label>
+                </div>
+                <p>Пример вызова</p><code>
+                  <pre>+custom-textarea({inputLabel: "Расскажите о себе", inputName: "user-info"})</pre></code>
+                <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example"><span class="custom-select__error">Выберите тему обращения</span>
+                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
+                  <ul class="custom-select__list" role="listbox">
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="true" role="option">Тема 1</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Тема 2</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Тема 3</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Тема 4</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Тема 5</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Тема 6</li>
+                  </ul>
+                </div><code>
+                  <pre></pre>+custom-select({error: "Выберите тему обращения", optionsList: [{text: "Тема 1", value: "id-1"}, {text:
+                  "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5",
+                  value: "id-5"}, {text: "Тема 6", value: "id-6"}]})(data-select, data-validate-type="select", data-name="some-name",
+                  data-id="id-example").custom-select</code>
+                <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
+                  <label>
+                    <input type="checkbox" name="user-agreement" checked><span class="custom-toggle__icon"><span class="custom-toggle__check">
+                        <svg width="19" height="14" aria-hidden="true">
+                          <use xlink:href="img/sprite_auto.svg#icon-needs-check"></use>
+                        </svg></span></span><span class="custom-toggle__label">Подтвердите своё согласие</span>
+                  </label>
+                  <div class="custom-toggle__error">Согласие является обязательным</div>
+                </div>
+                <p>Пример вызова</p><code>
+                  <pre>+custom-toggle({inputLabel: "Подтвердите своё согласие", inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox</pre></code>
+                <button class="btn" type="reset">Сбросить форму
+                </button>
+                <button class="btn" type="submit">Отправить форму
+                </button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </main>
+      <script>const MoveTo = (() => {
+  /**
+  * Defaults
+  * @type {object}
+  */
+  const defaults = {
+    tolerance: 0,
+    duration: 800,
+    easing: 'easeOutQuart',
+    container: window,
+    callback() {},
+  };
+
+  /**
+  * easeOutQuart Easing Function
+  * @param  {number} t - current time
+  * @param  {number} b - start value
+  * @param  {number} c - change in value
+  * @param  {number} d - duration
+  * @return {number} - calculated value
+  */
+  function easeOutQuart(t, b, c, d) {
+    t /= d;
+    t--;
+    return -c * (t * t * t * t - 1) + b;
+  }
+
+  /**
+  * Merge two object
+  *
+  * @param  {object} obj1
+  * @param  {object} obj2
+  * @return {object} merged object
+  */
+  function mergeObject(obj1, obj2) {
+    const obj3 = {};
+    Object.keys(obj1).forEach((propertyName) => {
+      obj3[propertyName] = obj1[propertyName];
+    });
+
+    Object.keys(obj2).forEach((propertyName) => {
+      obj3[propertyName] = obj2[propertyName];
+    });
+    return obj3;
+  }
+
+  /**
+  * Converts camel case to kebab case
+  * @param  {string} val the value to be converted
+  * @return {string} the converted value
+  */
+  function kebabCase(val) {
+    return val.replace(/([A-Z])/g, function ($1) {
+      return '-' + $1.toLowerCase();
+    });
+  }
+
+  /**
+  * Count a number of item scrolled top
+  * @param  {Window|HTMLElement} container
+  * @return {number}
+  */
+  function countScrollTop(container) {
+    if (container instanceof HTMLElement) {
+      return container.scrollTop;
+    }
+    return container.pageYOffset;
+  }
+
+  /**
+  * MoveTo Constructor
+  * @param {object} options Options
+  * @param {object} easeFunctions Custom ease functions
+  */
+  // eslint-disable-next-line no-shadow
+  function MoveTo(options = {}, easeFunctions = {}) {
+    this.options = mergeObject(defaults, options);
+    this.easeFunctions = mergeObject({easeOutQuart}, easeFunctions);
+  }
+
+  /**
+  * Register a dom element as trigger
+  * @param  {HTMLElement} dom Dom trigger element
+  * @param  {function} callback Callback function
+  * @return {function|void} unregister function
+  */
+  MoveTo.prototype.registerTrigger = function (dom, callback) {
+    if (!dom) {
+      return;
+    }
+
+    const href = dom.getAttribute('href') || dom.getAttribute('data-target');
+    // The element to be scrolled
+    const target = (href && href !== '#')
+      ? document.getElementById(href.substring(1))
+      : document.body;
+    const options = mergeObject(this.options, _getOptionsFromTriggerDom(dom, this.options));
+
+    if (typeof callback === 'function') {
+      options.callback = callback;
+    }
+
+    const listener = (e) => {
+      e.preventDefault();
+      this.move(target, options);
+    };
+
+    dom.addEventListener('click', listener, false);
+
+    // eslint-disable-next-line consistent-return
+    return () => dom.removeEventListener('click', listener, false);
+  };
+
+  /**
+  * Move
+  * Scrolls to given element by using easeOutQuart function
+  * @param  {HTMLElement|number} target Target element to be scrolled or target position
+  * @param  {object} options Custom options
+  */
+  MoveTo.prototype.move = function (target, options = {}) {
+    if (target !== 0 && !target) {
+      return;
+    }
+
+    options = mergeObject(this.options, options);
+
+    let distance = typeof target === 'number' ? target : target.getBoundingClientRect().top;
+    const from = countScrollTop(options.container);
+    let startTime = null;
+    let lastYOffset;
+    distance -= options.tolerance;
+
+    // rAF loop
+    /* eslint-disable-next-line */
+    const loop = (currentTime) => {
+      const currentYOffset = countScrollTop(this.options.container);
+
+      if (!startTime) {
+        // To starts time from 1, we subtracted 1 from current time
+        // If time starts from 1 The first loop will not do anything,
+        // because easing value will be zero
+        startTime = currentTime - 1;
+      }
+
+      const timeElapsed = currentTime - startTime;
+
+      if (lastYOffset) {
+        if (
+          (distance > 0 && lastYOffset > currentYOffset) ||
+          (distance < 0 && lastYOffset < currentYOffset)
+        ) {
+          return options.callback(target);
+        }
+      }
+      lastYOffset = currentYOffset;
+
+      const val = this.easeFunctions[options.easing](timeElapsed, from, distance, options.duration);
+
+      options.container.scroll(0, val);
+
+      if (timeElapsed < options.duration) {
+        window.requestAnimationFrame(loop);
+      } else {
+        options.container.scroll(0, distance + from);
+        options.callback(target);
+      }
+    };
+
+    window.requestAnimationFrame(loop);
+  };
+
+  /**
+  * Adds custom ease function
+  * @param {string}   name Ease function name
+  * @param {function} fn   Ease function
+  */
+  MoveTo.prototype.addEaseFunction = function (name, fn) {
+    this.easeFunctions[name] = fn;
+  };
+
+  /**
+  * Returns options which created from trigger dom element
+  * @param  {HTMLElement} dom Trigger dom element
+  * @param  {object} options The instance's options
+  * @return {object} The options which created from trigger dom element
+  */
+  function _getOptionsFromTriggerDom(dom, options) {
+    const domOptions = {};
+
+    Object.keys(options).forEach((key) => {
+      const value = dom.getAttribute(`data-mt-${kebabCase(key)}`);
+      if (value) {
+        domOptions[key] = isNaN(value) ? value : parseInt(value, 10);
+      }
+    });
+    return domOptions;
+  }
+
+  return MoveTo;
+})();
+window.MoveTo = MoveTo;
+
+class NavigationChanger {
+  constructor() {
+    this._scrollDuration = 1000;
+    this._currentIndex = 0;
+    this._newCurrentIndex = null;
+    this._blockShift = 50;
+    this._linkElements = document.querySelectorAll('[data-navigation-link]');
+
+    this._moveTo = new window.MoveTo({
+      duration: this._scrollDuration,
+      easing: 'easeOutQuart',
+    });
+
+    this._documentScrollHandler = this._documentScrollHandler.bind(this);
+  }
+
+  init() {
+    if (!this._linkElements.length) {
+      return;
+    }
+    this._initMoveTo();
+    this._changeLinksActiveState();
+    document.addEventListener('scroll', this._documentScrollHandler);
+  }
+
+  _documentScrollHandler() {
+    this._changeLinksActiveState();
+  }
+
+  _changeLinksActiveState() {
+    this._linkElements.forEach((link, index) => {
+      const currentBlockElement = document.querySelector(`${link.getAttribute('href')}`);
+      if (!currentBlockElement) {
+        // eslint-disable-next-line no-console
+        console.error('Блока на который ссылается ссылка не существует! Проверьте соответствие href ссылок с id блоков');
+        return;
+      }
+      if (currentBlockElement.getBoundingClientRect().bottom > this._blockShift && currentBlockElement.getBoundingClientRect().top <= this._blockShift) {
+        link.classList.add('is-active');
+      } else {
+        link.classList.remove('is-active');
+      }
+
+      if (document.body.getBoundingClientRect().bottom - window.innerHeight < this._blockShift && currentBlockElement.getBoundingClientRect().top > this._blockShift) {
+        this._linkElements[index - 1].classList.remove('is-active');
+        link.classList.add('is-active');
+      }
+    });
+  }
+
+  _removeLinkAnimation() {
+    this._linkElements.forEach((link, index) => {
+      if (index !== this._currentIndex && index !== this._newCurrentIndex) {
+        link.classList.add('is-inactive');
+      }
+    });
+  }
+
+  _addLinkAnimation() {
+    this._linkElements.forEach((link) => link.classList.remove('is-inactive'));
+    this._currentIndex = this._newCurrentIndex;
+  }
+
+  _initMoveTo() {
+    this._linkElements.forEach((link, index) => {
+      link.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        const target = document.querySelector(`${link.getAttribute('href')}`);
+        if (!target) {
+          // eslint-disable-next-line no-console
+          console.error('Блока на который ссылается ссылка не существует! Проверьте соответствие href ссылок с id блоков');
+          return;
+        }
+        this._newCurrentIndex = index;
+        this._moveTo.move(target);
+        this._removeLinkAnimation();
+        setTimeout(() => {
+          this._addLinkAnimation();
+        }, this._scrollDuration);
+      });
+    });
+  }
+}
+
+const navigationChanger = new NavigationChanger();
+
+navigationChanger.init();
+
+      </script>
+    </div>
+    <div class="modal modal--preload modal--video modal--video-1" data-modal="video-1">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-video" data-iframe data-iframe-src="https://www.youtube.com/embed/p0HxjXVP2XE?enablejsapi=1">
+            <iframe width="1153" height="648" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Close popup" data-close-modal>
+            <svg width="16" height="17" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--video modal--video-2" data-modal="video-2">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-video" data-iframe data-iframe-src="https://www.youtube.com/embed/PF8PQWoKpgs?enablejsapi=1">
+            <iframe width="1153" height="648" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Close popup" data-close-modal>
+            <svg width="16" height="17" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--form modal--form-rxpay" data-modal="form-rxpay">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-form">
+            <h2 class="modal-form__title">RxPay</h2>
+            <p class="modal-form__description">Funding for pharmacies <br> and wholesalers</p>
+            <ul class="modal-form__list">
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Full purchase <br> payment</span>
+              </li>
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Long repayment <br> period</span>
+              </li>
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Low service <br> fee</span>
+              </li>
+            </ul>
+            <div class="modal-form__form" data-validate>
+              <form action="#">
+                <div class="modal-form__inputs">
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text" data-limitations="letters">
+                      <label><span class="custom-input__label">Name</span>
+                        <input type="text" id="rxpay-user-name" name="rxpay-user-name" placeholder="First name">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="email">
+                      <label><span class="custom-input__label">E-mail</span>
+                        <input type="email" id="rxpay-user-email" name="rxpay-user-email" placeholder="name@domain.com">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="simple-phone">
+                      <label><span class="custom-input__label">Phone</span>
+                        <input type="tel" id="rxpay-user-tel" name="rxpay-user-tel" minlength="7" maxlength="20" placeholder="1-877-378-4100">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">Company</span>
+                        <input type="text" id="rxpay-user-company" name="rxpay-user-company" placeholder="Company name">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">City</span>
+                        <input type="text" id="rxpay-user-city" name="rxpay-user-city" placeholder="Enter your city">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">Country</span>
+                        <input type="text" id="rxpay-user-country" name="rxpay-user-country" placeholder="Enter your country/region">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn--sky modal-form__button" type="submit" aria-label="Submit form">
+                  <svg width="16" height="14" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#icon-btn-arrow-right"></use>
+                  </svg><span>Make inquiry</span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Close popup" data-close-modal>
+            <svg width="16" height="17" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--form modal--form-rxpos" data-modal="form-rxpos">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-form">
+            <h2 class="modal-form__title">RxPos</h2>
+            <p class="modal-form__description">Sales &amp;&nbsp;purchases software</p>
+            <ul class="modal-form__list">
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Complete <br> automation</span>
+              </li>
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Simple <br> payments</span>
+              </li>
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Inventory & reordering <br> management</span>
+              </li>
+            </ul>
+            <div class="modal-form__form" data-validate>
+              <form action="#">
+                <div class="modal-form__inputs">
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text" data-limitations="letters">
+                      <label><span class="custom-input__label">Name</span>
+                        <input type="text" id="rxpos-user-name" name="rxpos-user-name" placeholder="First name">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="email">
+                      <label><span class="custom-input__label">E-mail</span>
+                        <input type="email" id="rxpos-user-email" name="rxpos-user-email" placeholder="name@domain.com">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="simple-phone">
+                      <label><span class="custom-input__label">Phone</span>
+                        <input type="tel" id="rxpos-user-tel" name="rxpos-user-tel" minlength="7" maxlength="20" placeholder="1-877-378-4100">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">Company</span>
+                        <input type="text" id="rxpos-user-company" name="rxpos-user-company" placeholder="Company name">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">City</span>
+                        <input type="text" id="rxpos-user-city" name="rxpos-user-city" placeholder="Enter your city">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">Country</span>
+                        <input type="text" id="rxpos-user-country" name="rxpos-user-country" placeholder="Enter your country/region">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn--sky modal-form__button" type="submit" aria-label="Submit form">
+                  <svg width="16" height="14" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#icon-btn-arrow-right"></use>
+                  </svg><span>Make inquiry</span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Close popup" data-close-modal>
+            <svg width="16" height="17" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--form modal--form-government" data-modal="form-government">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-form">
+            <h2 class="modal-form__title">Government</h2>
+            <p class="modal-form__description">Partner to&nbsp;reduce fake drugs</p>
+            <ul class="modal-form__list">
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Cheap <br> upfront</span>
+              </li>
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Low operating <br> costs</span>
+              </li>
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Free annual <br> trainings</span>
+              </li>
+            </ul>
+            <div class="modal-form__form" data-validate>
+              <form action="#">
+                <div class="modal-form__inputs">
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text" data-limitations="letters">
+                      <label><span class="custom-input__label">Name</span>
+                        <input type="text" id="government-user-name" name="government-user-name" placeholder="First name">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="email">
+                      <label><span class="custom-input__label">E-mail</span>
+                        <input type="email" id="government-user-email" name="government-user-email" placeholder="name@domain.com">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="simple-phone">
+                      <label><span class="custom-input__label">Phone</span>
+                        <input type="tel" id="government-user-tel" name="government-user-tel" minlength="7" maxlength="20" placeholder="1-877-378-4100">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">Agency name</span>
+                        <input type="text" id="government-user-agency-name" name="government-user-agency-name" placeholder="Agency name">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">City</span>
+                        <input type="text" id="government-user-city" name="government-user-city" placeholder="Enter your city">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">Country</span>
+                        <input type="text" id="government-user-country" name="government-user-country" placeholder="Enter your country/region">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn--sky modal-form__button" type="submit" aria-label="Submit form">
+                  <svg width="16" height="14" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#icon-btn-arrow-right"></use>
+                  </svg><span>Make inquiry</span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Close popup" data-close-modal>
+            <svg width="16" height="17" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--form modal--form-insurance" data-modal="form-insurance">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-form">
+            <h2 class="modal-form__title">Insurance</h2>
+            <p class="modal-form__description">Partner to&nbsp;provide financing to&nbsp;insured patients</p>
+            <ul class="modal-form__list">
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Credit <br> facilities</span>
+              </li>
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Instant <br> approval</span>
+              </li>
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Network of trusted <br> care providers</span>
+              </li>
+            </ul>
+            <div class="modal-form__form" data-validate>
+              <form action="#">
+                <div class="modal-form__inputs">
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text" data-limitations="letters">
+                      <label><span class="custom-input__label">Name</span>
+                        <input type="text" id="insurance-user-name" name="insurance-user-name" placeholder="First name">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="email">
+                      <label><span class="custom-input__label">E-mail</span>
+                        <input type="email" id="insurance-user-email" name="insurance-user-email" placeholder="name@domain.com">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="simple-phone">
+                      <label><span class="custom-input__label">Phone</span>
+                        <input type="tel" id="insurance-user-tel" name="insurance-user-tel" minlength="7" maxlength="20" placeholder="1-877-378-4100">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">Company</span>
+                        <input type="text" id="insurance-user-company" name="insurance-user-company" placeholder="Company name">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">City</span>
+                        <input type="text" id="insurance-user-city" name="insurance-user-city" placeholder="Enter your city">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">Country</span>
+                        <input type="text" id="insurance-user-country" name="insurance-user-country" placeholder="Enter your country/region">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn--sky modal-form__button" type="submit" aria-label="Submit form">
+                  <svg width="16" height="14" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#icon-btn-arrow-right"></use>
+                  </svg><span>Make inquiry</span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Close popup" data-close-modal>
+            <svg width="16" height="17" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--form modal--form-lenders" data-modal="form-lenders">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-form">
+            <h2 class="modal-form__title">Lenders</h2>
+            <p class="modal-form__description">Partner to&nbsp;support trusted sellers</p>
+            <ul class="modal-form__list">
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>No/low fees <br> per funded loan</span>
+              </li>
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Steady revenue <br> stream</span>
+              </li>
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Simple <br> payments</span>
+              </li>
+            </ul>
+            <div class="modal-form__form" data-validate>
+              <form action="#">
+                <div class="modal-form__inputs">
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text" data-limitations="letters">
+                      <label><span class="custom-input__label">Name</span>
+                        <input type="text" id="lenders-user-name" name="lenders-user-name" placeholder="First name">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="email">
+                      <label><span class="custom-input__label">E-mail</span>
+                        <input type="email" id="lenders-user-email" name="lenders-user-email" placeholder="name@domain.com">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="simple-phone">
+                      <label><span class="custom-input__label">Phone</span>
+                        <input type="tel" id="lenders-user-tel" name="lenders-user-tel" minlength="7" maxlength="20" placeholder="1-877-378-4100">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">Company</span>
+                        <input type="text" id="lenders-user-company" name="lenders-user-company" placeholder="Company name">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">City</span>
+                        <input type="text" id="lenders-user-city" name="lenders-user-city" placeholder="Enter your city">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">Country</span>
+                        <input type="text" id="lenders-user-country" name="lenders-user-country" placeholder="Enter your country/region">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn--sky modal-form__button" type="submit" aria-label="Submit form">
+                  <svg width="16" height="14" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#icon-btn-arrow-right"></use>
+                  </svg><span>Make inquiry</span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Close popup" data-close-modal>
+            <svg width="16" height="17" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--form modal--form-rxhmo" data-modal="form-rxhmo">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-form">
+            <h2 class="modal-form__title">RxHMO</h2>
+            <p class="modal-form__description">Health maintenance organization</p>
+            <ul class="modal-form__list">
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Authentic drugs <br> without waiting</span>
+              </li>
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Large pharmacy <br> network</span>
+              </li>
+              <li class="modal-form__item">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-check-mark"></use>
+                </svg><span>Fast and easy <br> application process</span>
+              </li>
+            </ul>
+            <div class="modal-form__form" data-validate>
+              <form action="#">
+                <div class="modal-form__inputs">
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text" data-limitations="letters">
+                      <label><span class="custom-input__label">Name</span>
+                        <input type="text" id="rxhmo-user-name" name="rxhmo-user-name" placeholder="First name">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="email">
+                      <label><span class="custom-input__label">E-mail</span>
+                        <input type="email" id="rxhmo-user-email" name="rxhmo-user-email" placeholder="name@domain.com">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="simple-phone">
+                      <label><span class="custom-input__label">Phone</span>
+                        <input type="tel" id="rxhmo-user-tel" name="rxhmo-user-tel" minlength="7" maxlength="20" placeholder="1-877-378-4100">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">Company</span>
+                        <input type="text" id="rxhmo-user-company" name="rxhmo-user-company" placeholder="Company name">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">City</span>
+                        <input type="text" id="rxhmo-user-city" name="rxhmo-user-city" placeholder="Enter your city">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__input">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">Country</span>
+                        <input type="text" id="rxhmo-user-country" name="rxhmo-user-country" placeholder="Enter your country/region">
+                      </label>
+                      <div class="custom-input__error">please check again</div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn--sky modal-form__button" type="submit" aria-label="Submit form">
+                  <svg width="16" height="14" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#icon-btn-arrow-right"></use>
+                  </svg><span>Make inquiry</span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Close popup" data-close-modal>
+            <svg width="16" height="17" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--success" data-modal="success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-success">
+            <h2 class="modal-success__title">Thank you!</h2>
+            <p class="modal-success__description">We&rsquo;ve received your inquiry and will get back to&nbsp;you within 24&nbsp;hours.</p>
+            <div class="modal-success__buttons">
+              <button class="modal-success__button btn btn--transparent" type="button" aria-label="Close modal" data-close-modal>
+                <svg width="16" height="14" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-btn-arrow-left"></use>
+                </svg><span>Go back</span>
+              </button>
+              <a class="btn modal-success__button btn--sky" href="./index.html">Main page
+              </a>
+            </div>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Close popup" data-close-modal>
+            <svg width="16" height="17" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

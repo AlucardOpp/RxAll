@@ -1,0 +1,132 @@
+.cases-content {
+  position: relative;
+  margin-bottom: 330px;
+
+  @include vp-1919 {
+    margin-bottom: 279px;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 45px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+}
+
+.cases-content__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+  margin-left: 51px;
+  padding: 0;
+  padding-right: 10px;
+  list-style: none;
+
+  @include vp-1919 {
+    padding-right: 0;
+  }
+
+  @include vp-1439 {
+    margin-left: 0;
+  }
+
+  &--simple {
+    padding-top: 0;
+  }
+
+  &--simple > li:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.cases-content__list > li {
+  margin-bottom: 57px;
+
+  @include vp-1919 {
+    margin-bottom: 45px;
+  }
+
+  @include vp-1279 {
+    margin-bottom: 75px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 50px;
+  }
+
+  &:nth-child(4n - 3) .case-card {
+    background-color: $color-broom-opacity-01;
+  }
+
+  &:nth-child(4n - 2) .case-card {
+    background-color: $color-panache;
+  }
+
+  &:nth-child(4n - 1) .case-card {
+    background-color: $color-alice-blue-3;
+  }
+
+  &:nth-child(4n) .case-card {
+    background-color: $color-lavender-blush;
+  }
+}
+
+.cases-content__list--cards > li:first-of-type {
+  margin-bottom: 47px; //PP
+
+  @include vp-1279 {
+    margin-bottom: 75px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 52px;
+  }
+}
+
+.cases-content__list--cards > li:first-of-type .case-item-header {
+  padding-top: 87px; //PP
+
+  @include vp-1919 {
+    padding-top: 91px; //PP
+  }
+
+  @include vp-1023 {
+    padding-top: 0; //PP
+  }
+}
+
+.cases-content__bg-image {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 936px;
+  height: 790px;
+
+  @include vp-1919 {
+    bottom: -385px;
+    left: -48px;
+    width: 714px;
+    height: 603px;
+  }
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.cases-content img {
+  position: relative;
+  left: 0;
+  bottom: 10px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+
+  @include vp-1919 {
+    width: auto;
+    height: 100%;
+  }
+}

@@ -1,0 +1,18 @@
+mixin services-card(card, mod)
+  article.services-card(class="services-card--" + mod + (card.icons ? " services-card--has-icon" : ""), id=(card.id) ? card.id : null)&attributes(attributes)
+    if (card.icons)
+      h2!=card.title
+    else
+      h3!=card.title
+    p!=card.text
+    if (card.icons)
+      each icon, index in card.icons
+        +icon(icon.name, icon.width, icon.height)(class=(index === 0 ? "only-desktop " + icon.name : "only-mobile " + icon.name))
+    if (card.link)
+      a.link.link--blue(href=card.link.href data-open-modal=(hasForms === true && card.modalForm) ? `form-${card.modalForm}` : null)
+        if (card.link.icon === "icon-make")
+          +icon("icon-make", 15, 20).link__icon.link__icon--left
+          | !{card.link.text}
+        if (card.link.icon === "icon-arrow-right")
+          span!=card.link.text
+            +icon("icon-arrow-right", 15, 20).link__icon.link__icon--right

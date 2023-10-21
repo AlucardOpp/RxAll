@@ -1,0 +1,13 @@
+mixin content-404()
+  .content-404
+    .container
+      div
+        .content-404__bg-image
+          img(src='img/content/404--desktop-1920.svg', width="1294px", height="460px",  alt='404')
+        h1 PAGE NOT FOUND
+        p Sorry, the page you are looking for doesn&rsquo;t exist or&nbsp;has been moved.<br>Please email info@rxall.net about the problem, and we&rsquo;ll fix&nbsp;it!
+        .content-404__buttons
+          a(href="#").btn.btn--transparent
+            +icon("icon-btn-arrow-left", 15, 20).link__icon--left
+            | Go back
+          a(href="index.html").btn.btn--sky Main page

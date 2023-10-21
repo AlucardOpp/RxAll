@@ -1,0 +1,23 @@
+mixin drugs(data)
+  section.drugs
+    .container
+      .drugs__wrapper
+        ul.drugs__list-fake
+          each item, i in data.drugsFakeContent
+            li.fake-card(data-aos="fade-up" data-aos-delay=`${(i + 1) * 100 + 400}`)
+              .fake-card__header-wrapper
+                p.fake-card__header!=item.header
+              .fake-card__text-wrapper
+                p.fake-card__text!=item.text
+        .drugs__scanner
+          .drugs__info
+            p.drugs__header(data-aos="fade-right") RxScanner
+            p.drugs__text(data-aos="fade-right" data-aos-delay="500") Is&nbsp;the world&rsquo;s first device using&nbsp;AI and machine learning technology to&nbsp;check and confirm drug quality
+          ul.drugs__list-scanner
+            each item, i in data.drugsScannerContent
+               li.scanner-card(data-aos="fade" data-aos-delay=`${(i + 1) * 100 + 400}` data-aos-anchor=".drugs__list-scanner")
+                 .scanner-card__image(class=item.class)
+                 .scanner-card__text-wrapper
+                   p.scanner-card__text!=item.text
+
+

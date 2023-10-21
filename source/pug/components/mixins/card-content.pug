@@ -1,0 +1,28 @@
+mixin card-content(data)
+  each item in data.cardData
+    .container
+      .card-content(class!=attributes.class)
+        .card-content__image
+          +picture("content", item.cardImage, "jpg", 620, 330, "фото контента")
+        .card-content__info
+          p.card-content__remark!=item.upperRemark
+          h3.card-content__header!=item.headerText
+          p.card-content__title!=item.titleText
+          p.card-content__text!=item.contentCardText
+          if (item.buttonText === "Make inquiry")
+            a(href="mailto:info@rxall.net" data-open-modal=(hasForms === true) ? "form-rxpay" : null).btn.btn--sky.card-content__button
+              span!=item.buttonText
+          if (item.buttonText === "Shop marketplace")
+            a(href=" https://rxalldelivered.com/").btn.btn--sky.card-content__button
+              span!=item.buttonText
+          if (item.buttonText === "Help the world")
+            a(href="https://www.facebook.com/RxAll.Inc/").btn.btn--sky.card-content__button
+              span!=item.buttonText
+          if (item.buttonText === "Get RxScanner")
+            a(href="rx-scanner.html").btn.btn--sky.card-content__button
+              span!=item.buttonText
+          if (item.button)
+            .card-content__buttons-wrapper
+              button.btn.card-content__button-video(data-open-modal="video-2" aria-label="кнопка видео")
+                +icon("icon-video", "83", "83")
+              +picture("content", "video-button", "png", 163, 47, "указатель на видео").card-content__video-pointer

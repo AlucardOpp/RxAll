@@ -1,0 +1,143 @@
+.sine {
+  margin-bottom: 260px;
+
+  @include vp-1919 {
+    margin-bottom: 276px
+  }
+
+  @include vp-1023 {
+    margin-bottom: 157px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 51px;
+  }
+}
+
+.sine__line {
+  display: none;
+
+  &--main-desktop {
+    display: block;
+  }
+
+  @include vp-1919 {
+    &--main-desktop {
+      display: none;
+    }
+
+    &--secondary-desktop {
+      display: block;
+    }
+  }
+
+  @include vp-1023 {
+    &--secondary-desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @include vp-767 {
+    &--tablet {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
+    }
+  }
+}
+
+.sine__inner {
+  max-width: 1900px;
+  max-height: 697px;
+  display: flex;
+  margin: 0 auto;
+  padding-left: 185px;
+  position: relative;
+
+  @include vp-1919 {
+    max-width: 1433px;
+    max-height: 629px;
+    padding-left: 5px;
+  }
+
+  @include vp-1023 {
+    max-width: 766.5px;
+    max-height: 452px;
+    padding-left: 1px;
+  }
+
+  @include vp-767 {
+    max-width: 283px;
+    max-height:517px;
+    margin-left: 9px;
+  }
+}
+
+.sine__inner svg {
+  min-width: 1729px;
+
+  @include vp-1919 {
+    min-width: 100%;
+  }
+}
+
+.sine__image {
+  border-radius: 200px;
+  transform: rotate(136deg);
+  position: absolute;
+}
+
+.sine__image--red {
+  background-color: $color-cinnabar;
+  left: -127px;
+  width: 236px;
+  height: 454px;
+  bottom: -96px;
+
+  @include vp-1919 {
+    left: -175px;
+    bottom: -279px;
+  }
+
+  @include vp-1023 {
+    left: -247px;
+    bottom: -157px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.sine__image--transparent {
+  width: 369px;
+  height: 709px;
+  border: 1px solid $color-summer-sky;
+  background-color: transparent;
+  right: -270px;
+  bottom: -352px;
+
+  @include vp-1919 {
+    width: 284px;
+    height: 545px;
+    right: -212px;
+    bottom: -377px;
+  }
+
+  @include vp-1023 {
+    width: 165px;
+    height: 318px;
+    right: -123px;
+    bottom: -211px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}

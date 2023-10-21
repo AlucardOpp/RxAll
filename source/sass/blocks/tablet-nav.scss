@@ -1,0 +1,216 @@
+.tablet-nav {
+  display: flex;
+  position: fixed;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include vp-1439 {
+    display: none;
+  }
+
+  @include vp-1023 {
+    display: flex;
+    position: static;
+    transform: translateY(0);
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 4px 0 0 auto;
+    min-height: 34px;
+    border-right: 1px solid rgba($color-default-white, 0.5);
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 114px;
+    overflow: hidden;
+
+    @media (min-width: 1440px) {
+      &[data-aos="nav-anim"] {
+        opacity: 0;
+        transition-property: opacity, transform;
+        transform: translate3d(100px, 0, 0);
+        &.aos-animate {
+          opacity: 1;
+          transform: translateZ(0);
+        }
+      }
+    }
+
+    @include vp-1023 {
+      overflow: visible;
+      width: auto;
+      padding: 0 30px 0 0;
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    color: $color-night-rider;
+    fill: $color-night-rider;
+
+    &--white {
+      color: $color-default-white;
+      fill: $color-default-white;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
+    }
+
+    @include vp-1023 {
+      &:not(:last-of-type) {
+        margin-bottom: 0;
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &__icon {
+    & svg {
+      transition: fill $trans-default;
+      fill: inherit;
+
+      @include vp-1023 {
+        fill: $color-default-white;
+      }
+    }
+
+    @include vp-1023 {
+      &--1 {
+        & svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      &--2 {
+        & svg {
+        width: 18px;
+        height: 12px;
+        }
+      }
+
+      &--3 {
+        & svg {
+        width: 10px;
+        height: 17px;
+        }
+      }
+
+      &--4 {
+        & svg {
+        width: 16px;
+        height: 16px;
+        }
+      }
+
+      &--5 {
+        & svg {
+        width: 12px;
+        height: 16px;
+        }
+      }
+
+      &--6 {
+        & svg {
+        width: 15px;
+        height: 11px;
+        }
+      }
+    }
+  }
+
+  &__active {
+    display: none;
+
+    @include vp-1023 {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 115px;
+      height: 40px;
+      border-radius: 40px;
+      background-color: $color-summer-sky;
+      z-index: -1;
+      transform: rotate(-45deg);
+      top: -35px;
+      left: -25px;
+      clip-path: inset(0 100% 0 0);
+      transition: clip-path $trans-default;
+    }
+  }
+
+  &__link {
+    transition: opacity $trans-default;
+    position: relative;
+    z-index: 1;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: inherit;
+    transform: translateZ(0);
+
+    &.is-active ~ .tablet-nav__active {
+      clip-path: inset(0 0 0 0);
+    }
+
+    &.is-active span {
+      margin-right: 10px;
+      right: 0;
+    }
+
+    & span {
+      transition: margin $trans-default, right $trans-default, color $trans-default;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      color: inherit;
+      margin-left: 15px;
+      position: relative;
+      width: 64.5px;
+      right: -64.5px;
+      margin-right: -64.5px;
+
+      @include vp-1023 {
+        display: none
+      }
+    }
+
+    @include expand-interactive-area(200%, 200%);
+
+    @include vp-1023 {
+      @include expand-interactive-area(225%, 225%);
+    }
+
+    @include hover {
+      &:hover {
+        opacity: 0.6;
+
+        & span {
+          margin-right: 10px;
+          right: 0;
+        }
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+}

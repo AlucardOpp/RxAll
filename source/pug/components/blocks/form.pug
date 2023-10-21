@@ -1,0 +1,41 @@
+mixin form()
+  .form(class!=attributes.class)
+    .container
+      .form__wrap
+        .form__block
+          p.form__title Сontact us
+          p.form__text Tell us about your challenges, and we'll provide the best solution.
+          .form__fields(data-validate)
+            form(action='#', method='get')
+              +custom-input({
+                inputLabel: 'Name',
+                inputPlaceholder: 'First name',
+              })(data-validate-type= 'text')
+              +custom-input({
+                inputLabel: 'E-mail',
+                inputType: 'email',
+                inputPlaceholder: 'name@domain.com',
+              })(data-validate-type= 'email')
+              +custom-textarea({
+                inputLabel: 'Message',
+                inputPlaceholder: 'Tell us what you want to discuss',
+              })(data-validate-type= 'text')
+              +btn({
+                type: 'submit',
+                text: 'Send',
+                icon: 'icon-arrow',
+                width: 16,
+                height: 14,
+              }).form__submit
+        .form__box
+          p.form__box-title Get involved
+          p.form__box-text Join our global network community to be aware and share knowledge about the real danger of fake drugs.
+          +btn({
+            text: 'Help the world',
+            icon: 'icon-earth',
+            width: 20,
+            height: 20,
+            href: "https://www.facebook.com/RxAll.Inc/",
+          }).form__box-btn
+        .form__pattern
+

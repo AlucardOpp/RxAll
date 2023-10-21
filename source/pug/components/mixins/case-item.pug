@@ -1,0 +1,39 @@
+mixin case-item(data, mod)
+  if (mod === "cards")
+    article.case-item(class!="case-item--" + mod)
+      div.case-item-header
+        h2!=data.title
+        p!=data.text
+        a.link.link--blue(href="#form" data-trigger="#form")
+          | !{data.link.text}
+          +icon("icon-arrow-right", 15, 20).link__icon--right
+        .case-item-header__icon
+          each icon, index in data.icons
+            +icon(icon.name, icon.width, icon.height)(class=(index === 0 ? "only-desktop " + icon.name : "only-mobile " + icon.name))
+      +case-card(data.card, data.name)
+  if (mod === "simple")
+    article.case-item(class!="case-item--" + mod)
+      .case-item-header
+        h2!=data.title
+        p!=data.text
+        .case-item-header__icon-bracket.case-item-header__icon-bracket--desktop
+          <svg width="13" height="227" viewBox="0 0 13 227" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.67609 24.64V8.4C8.67609 3.78 5.49609 0 0.996094 0V1.14C4.77609 1.14 7.47609 4.38 7.47609 8.4V24.64C7.47609 27.64 8.7361 30.94 11.5561 32.44C8.7361 33.94 7.47609 37.24 7.47609 40.24L7.47951 218.5C7.47951 222.52 4.77951 225.58 0.999512 225.76V226.9C5.49951 226.9 8.67951 223.12 8.67951 218.5L8.67609 40.24C8.67609 37.48 9.81609 34.48 12.8761 33.1V31.78C9.81609 30.4 8.67609 27.4 8.67609 24.64Z" fill="currentColor"/>
+          </svg>
+        .case-item-header__icon-bracket.case-item-header__icon-bracket--tablet
+          <svg width="722" height="12" viewBox="0 0 722 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M438.732 7.68002L712.737 7.68C717.357 7.68 721.137 4.5 721.137 0L719.997 0C719.997 3.78 716.757 6.48 712.737 6.48L438.732 6.48002C435.732 6.48002 432.432 7.74002 430.932 10.56C429.432 7.74002 426.131 6.48002 423.131 6.48002L9.39093 6.48344C5.37091 6.48344 2.31091 3.78344 2.13092 0.00343704L0.990906 0.00343704C0.990906 4.50344 4.77094 7.68344 9.39093 7.68344L423.131 7.68002C425.891 7.68002 428.892 8.82002 430.272 11.88H431.592C432.972 8.82002 435.972 7.68002 438.732 7.68002Z" fill="currentColor"/>
+          </svg>
+        .case-item-header__icon-bracket.case-item-header__icon-bracket--mobile
+          <svg width="300" height="12" viewBox="0 0 300 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M72.6587 7.75967L8.39849 7.75965C3.77932 7.75965 0 4.54912 0 0.00591563L1.13979 0.00591563C1.13979 3.82221 4.37921 6.54813 8.39849 6.54813L72.6587 6.54815C75.6581 6.54815 78.9576 7.82025 80.4573 10.6673C81.9571 7.82025 85.2566 6.54815 88.2561 6.54815L291.601 6.54222C295.621 6.54222 298.68 3.81629 298.86 0L300 0C300 4.54321 296.221 7.75374 291.601 7.75374L88.2561 7.75967C85.4966 7.75967 82.4969 8.91062 81.1172 12H79.7974C78.4177 8.91062 75.4182 7.75967 72.6587 7.75967Z" fill="currentColor"/>
+          </svg>
+      ul.case-item__list
+        each item in data.list
+          li
+            h3!=item.title
+            p!=item.text
+            if (item.link)
+              a.link.link--blue(href=item.link.href data-open-modal=(hasForms === true && item.modalForm) ? `form-${item.modalForm}` : null)
+                span!=item.link.text
+                  +icon("icon-arrow-right", 15, 20).link__icon.link__icon--right

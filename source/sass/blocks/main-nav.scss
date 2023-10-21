@@ -1,0 +1,255 @@
+.main-nav {
+  margin-top: 5px;
+
+  @include vp-1023 {
+    padding-left: 19px;
+    margin-top: 8px;
+  }
+
+  @include vp-767 {
+    margin-left: auto;
+  }
+
+  &.is-active {
+    & .main-nav__toggle-open {
+      clip-path: inset(0 100% 100% 100%);
+    }
+
+    & .main-nav__toggle-close {
+      clip-path: inset(0 0 0 0);
+    }
+
+    & .main-nav__container {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    & .main-nav__wrapper {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  &__container {
+    @include vp-1023 {
+      position: absolute;
+      background-color: rgba($color-default-white, 0.95);
+      left: 0;
+      top: 52px;
+      transition: opacity $trans-default;
+      opacity: 0;
+      pointer-events: none;
+      width: 100%;
+      height: calc(100vh - 62px);
+    }
+
+    @include vp-767 {
+      top: 48px;
+    }
+  }
+
+  &__wrapper {
+    @include vp-1023 {
+      width: 320px;
+      margin-left: auto;
+      transition: clip-path $trans-default;
+      clip-path: inset(0 0 0 100%);
+      height: 100%;
+      box-shadow: 0 1px 3px rgba($color-default-black, 0.03);
+      background-color: $color-bunting;
+      padding: 30px 20px;
+      overflow-y: auto;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include vp-1023 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 39px;
+
+      @include vp-1023 {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+    &.main-nav__item--list {
+      position: relative;
+
+      @include vp-1023 {
+        position: static;
+        pointer-events: none;
+      }
+
+      @include hover {
+        &:hover {
+          & .main-nav__sublist-wrapper {
+            pointer-events: auto;
+            clip-path: inset(0 0 0 0);
+          }
+        }
+      }
+    }
+  }
+
+  &__sublist {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1.5px dotted rgba($color-default-white, 0.5);
+  }
+
+  &__sublist-wrapper {
+    transition: clip-path $trans-default;
+    clip-path: inset(0 0 100% 0);
+    pointer-events: none;
+    position: absolute;
+    top: 22px;
+    left: -20px;
+    padding: 31px 28px 28px;
+    background-color: $color-bunting;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 25px rgba($color-bunting, 0.25);
+
+    @include vp-1023 {
+      position: static;
+      box-shadow: none;
+      border-radius: 0;
+      clip-path: inset(0 0 0 0);
+      padding: 30px 0 0 9px;
+      min-height: 126px;
+    }
+  }
+
+  &__subitem {
+    position: relative;
+    padding-left: 16.5px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 28px;
+    }
+
+    @include vp-1023 {
+      padding-left: 15px;
+      position: static;
+    }
+  }
+
+  &__sublink {
+    transition: opacity $trans-default;
+    color: $color-default-white;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    z-index: 2;
+
+    @include vp-1023 {
+      position: relative;
+      pointer-events: all;
+
+      @include expand-interactive-area(150%, 150%);
+    }
+
+    @include hover {
+      &:hover,
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__link {
+    color: $color-default-white;
+    transition: opacity $trans-default;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transform: translateZ(0);
+
+    & svg {
+      margin-top: 3px;
+      margin-right: 8px;
+    }
+
+    @include hover {
+      &:hover,
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background-color: $color-transparent;
+    transition: opacity $trans-default;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+    -webkit-tap-highlight-color: transparent;
+
+    @include expand-interactive-area(200%, 200%);
+
+    &-open {
+      transition: clip-path $trans-default;
+      clip-path: inset(0 0 0 0);
+      pointer-events: none;
+      display: block;
+    }
+
+    &-close {
+      display: block;
+      position: absolute;
+      transition: clip-path $trans-default;
+      top: 0;
+      left: 0;
+      clip-path: inset(0 100% 100% 100%);
+      pointer-events: none;
+
+      @include vp-1023 {
+        top: 2px;
+        left: 4px;
+
+        & svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    @include hover {
+      &:hover,
+      &:active {
+        opacity: 0.6;
+      }
+    }
+
+    @include vp-1023 {
+      display: block;
+    }
+  }
+}

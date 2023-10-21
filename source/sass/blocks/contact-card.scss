@@ -1,0 +1,144 @@
+
+.contact-element--yellow .contact-card {
+  background-color: $color-broom-opacity-01;
+
+  @include vp-1023 {
+    background-color: transparent;
+  }
+}
+
+.contact-element--green .contact-card {
+  background-color: $color-panache;
+
+  @include vp-1023 {
+    background-color: inherit;
+  }
+}
+
+.contact-element--blue .contact-card {
+  background-color: $color-alice-blue;
+
+  @include vp-1023 {
+    background-color: inherit;
+  }
+}
+
+.contact-element--light-yellow .contact-card {
+  background-color: $color-promenade;
+
+  @include vp-1023 {
+    background-color: inherit;
+  }
+}
+
+.contact-card {
+  padding: 50px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+
+  @include vp-1919 {
+    padding-top: 50px;
+    padding-left: 43px;
+  }
+
+  @include vp-1023 {
+    padding-left: 24px;
+    padding-top: 35px;
+    padding-bottom: 36px;
+    padding-right: 16px;
+  }
+
+  @include vp-767 {
+    padding: 36px 10px;
+    padding-right: 5px;
+    padding-top: 30px;
+    padding-bottom: 5px;
+  }
+}
+
+.contact-card__header,
+.contact-card__text,
+.contact-card__managment,
+.contact-card__questions {
+  margin-top: 0;
+  color: $color-night-rider;
+}
+
+.contact-card__header {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+
+  @include vp-1023 {
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.contact-card__text,
+.contact-card__managment,
+.contact-card__questions {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+
+.contact-card__text {
+  margin-bottom: 35px;
+
+  @include vp-1023 {
+    margin-bottom: 15px;
+  }
+
+  @include vp-767 {
+    letter-spacing: unset;
+  }
+}
+
+.contact-card__managment,
+.contact-card__questions {
+  font-weight: 700;
+}
+
+.contact-card__managment span,
+.contact-card__questions span {
+  font-weight: 400;
+}
+
+.contact-card__managment {
+  margin-bottom: 15px;
+
+  @include vp-1919 {
+    margin-top: auto;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 12px;
+    display:flex;
+    flex-direction: column;
+  }
+}
+
+.contact-card__questions {
+  margin-bottom: 0;
+
+  @include vp-1023 {
+    display:flex;
+    flex-direction: column;
+  }
+}
+
+.contact-element--light-yellow .contact-card:nth-child(2) .contact-card__text {
+  @include vp-1919 {
+    margin-bottom: 13px;
+  }
+
+  @include vp-1023 {
+    letter-spacing: -0.2px;
+  }
+}
+
+

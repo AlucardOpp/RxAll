@@ -1,0 +1,5 @@
+mixin scanner-content(data)
+  section.scanner-content(class!=attributes.class id="scanner")
+    each item, index in scannerContent.content
+      +card-element(item)(class=item.class id=item.class)
+        +card-content(scannerContent.cardsContent[index])

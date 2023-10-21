@@ -1,0 +1,14 @@
+mixin cases-content(data)
+  section.cases-content
+    h2.visually-hidden RxScanner cases list
+    .container.container--no-padding
+      .cases-content__bg-image
+        +picture("content/cases", "rx-scanner", "jpg", 936, 790, "RxScanner image")
+      ul.cases-content__list.cases-content__list--cards
+        each item in data
+          li
+            +case-item(item, "cards")
+      ul.cases-content__list.cases-content__list--simple
+        each item in caseItems
+          li
+            +case-item(item, "simple")

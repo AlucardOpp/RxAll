@@ -1,0 +1,97 @@
+.custom-input,
+.custom-textarea {
+  position: relative;
+
+  display: flex;
+  width: auto;
+
+  label {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    input,
+    textarea {
+      flex-grow: 1;
+      min-height: 62px;
+      padding: 20px;
+      width: 100%;
+
+      color: $color-night-rider;
+
+      border: 1px solid $color-gainsboro;
+      border-radius: 17px;
+      outline: none;
+
+      transition: border $trans-default;
+
+      &::placeholder {
+        color: $color-silver;
+      }
+
+      &:hover {
+        border: 1px solid rgba($color-night-rider, 0.6);
+      }
+
+      &:focus {
+        border: 1px solid $color-night-rider;
+      }
+    }
+  }
+
+  &__error {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 160%;
+
+    color: $color-silver;
+
+    opacity: 0;
+
+    transition: opacity $trans-default;
+  }
+
+  &.is-invalid {
+    input {
+      border: 1px solid $color-cinnabar;
+
+      &:focus,
+      &:hover {
+        border: 1px solid rgba($color-cinnabar, 0.6);
+      }
+    }
+
+    .custom-input__error {
+      opacity: 1;
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    color: $color-night-rider;
+    font-size: 16px;
+    line-height: 160%;
+    margin-bottom: 5px;
+
+    @include vp-767 {
+      margin-bottom: 7px;
+    }
+  }
+
+  /*&.is-valid {
+    input {
+      border: 2px solid $color-malachite;
+
+      &:focus,
+      &:hover {
+        border: 2px solid rgba($color-malachite, 0.5);
+      }
+    }
+  }*/
+}

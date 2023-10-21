@@ -1,0 +1,10 @@
+mixin services-content()
+  section.services-content(id="wholesalers")
+    h2.visually-hidden!="Services"
+    .container.container--no-padding
+      .services-content
+        +services-list("service")
+      .services-content
+        +services-list("advantages")
+      .services-content.services-content--mixed.services-content--decore-image(id="for-buyers")
+        +services-list("for-buyers")

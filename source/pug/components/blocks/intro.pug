@@ -1,0 +1,23 @@
+mixin intro()
+  section.intro(id="intro")
+    .container
+      .intro__text-content
+        h1.intro__title #[span.intro__title-text.intro__title-text--1(data-aos="fade-right")!="Digital"] #[span.intro__title-text.intro__title-text--2(data-aos="fade-right" data-aos-delay="500")!="infrastructure"] #[span.intro__title-text.intro__title-text--3(data-aos="fade-right" data-aos-delay="600")!="platform"] #[span.intro__title-text.intro__title-text--4(data-aos="fade-right" data-aos-delay="700")!="for healthcare"]
+        p.intro__description(data-aos="fade-right" data-aos-delay="800")!="RxAll is&nbsp;a&nbsp;health-tech platform that provides digital infrastructure to&nbsp;pharmacies (including those in&nbsp;hospitals). Our mission is&nbsp;to&nbsp;make quality healthcare accessible to&nbsp;everyone. <br> We&nbsp;create cost-effective and robust tech solutions including a&nbsp;drug testing platform, pharmacy management software, and an&nbsp;invoice financing platform."
+        .intro__button(data-aos="fade-right" data-aos-delay="900")
+          a.btn.btn--sky.intro__link(href="#wholesalers" data-trigger="#wholesalers" aria-label="Go to detailed version")
+            +icon("icon-btn-arrow-right", 16, 14)
+            span!="Explore"
+      .intro__images.intro-images
+        .intro-images__wrapper
+          .intro-images__image-wrapper
+            .intro-images__image
+              +picture("content/intro", "intro-image-1", "jpg", 784, 672, "Background image")
+          .intro-images__image-wrapper
+            .intro-images__image
+          .intro-images__image-wrapper
+            .intro-images__image
+              +picture("content/intro", "intro-image-2", "jpg", 468, 413, "Background image")
+          .intro-images__image-wrapper
+            .intro-images__image
+

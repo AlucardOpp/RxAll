@@ -1,0 +1,27 @@
+mixin story ()
+  -
+    const list = [
+      'Imagine purchasing some <span>medicine</span> at your local pharmacy and falling into a coma for 21 days after taking it.',
+
+      'This <span>happened to me</span> when I was 15 years old. Fortunately, I pulled through and got a second chance at life, but most fake drug victims are not so lucky.',
+
+      'Fake drugs kill 1,000,000 people each year. <span>Over 50% of drugs</span> in some markets are substandard, and people have no way of knowing the quality before they use them.',
+
+      'That experience of suffering from the effects of a fake drug — as well as the belief that science and technology should serve the public good — <span>inspired me to launch RxAll.</span>',
+
+      '<span>Our mission</span> is to make sure that no one dies from counterfeit or substandard drugs anywhere in Africa.',
+    ]
+
+  section.story(data-animate)
+    .container
+      h2.story__title(data-aos="fade-right") Our story
+      .story__wrap
+        .story__block
+          .story__img(data-aos="fade-right" data-aos-delay="500")
+            +picture('content', 'about-story', 'png', 350, 349, '')
+          .story__name-wrap
+            p.story__name(data-aos="fade-right" data-aos-delay="600" data-aos-anchor=".story__img") Adebayo Alonge
+            span.story__position(data-aos="fade-right" data-aos-delay="700" data-aos-anchor=".story__img") RxAll CEO and Founder
+        ul.story__list
+          each item, i in list
+            li.story__item(class=`story__item--${i + 1}`, data-aos="fade-left", data-aos-delay=`${(i + 1) * 100 + 400}`)!= item

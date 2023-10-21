@@ -1,0 +1,48 @@
+mixin header(headerMods, currentUrl)
+  header.header(class=headerMods)
+    .container
+      if(currentUrl === "index.html")
+        span.header__logo
+          +icon("icon-logo", 71, 35)
+      else
+        a.header__logo(href="./index.html", aria-label="Go to home page")
+          +icon("icon-logo", 71, 35)
+      if(currentUrl === "index.html")
+        nav.tablet-nav
+          ul.tablet-nav__list(data-aos="nav-anim")
+            each link in headerTabletLinks
+              li.tablet-nav__item(class=`tablet-nav__item--${link.icon}`)
+                a.tablet-nav__link(class=(link.href === "#intro") ? "is-active" : "", href=link.href, aria-label="Go to selected block", data-navigation-link)
+                  .tablet-nav__icon(class=`tablet-nav__icon--${link.icon}`)
+                    +icon(`icon-tablet-menu-${link.icon}`, link.width, link.height)
+                  span!=link.title
+                span.tablet-nav__active
+      else
+
+      nav.main-nav
+        button.main-nav__toggle.btn-reset(type="button", aria-label="Menu display switch", aria-pressed="false")
+          span.main-nav__toggle-open
+            +icon("icon-toggle-open", 20, 20)
+          span.main-nav__toggle-close
+            +icon("icon-toggle-close", 20, 20)
+        .main-nav__container
+          .main-nav__wrapper
+            ul.main-nav__list
+              li.main-nav__item.main-nav__item--list
+                span.main-nav__link
+                  +icon("icon-our-products", 17, 17)
+                  span!="Our products"
+                .main-nav__sublist-wrapper
+                  ul.main-nav__sublist
+                    li.main-nav__subitem
+                      a.main-nav__sublink(href="./rx-scanner.html" aria-label="Go to selected link")!="RxScanner"
+                    li.main-nav__subitem
+                      a.main-nav__sublink(href="https://rxalldelivered.com/" target="_blank" aria-label="Go to selected link")!="RxDelivered"
+                    li.main-nav__subitem
+                      a.main-nav__sublink(href=(currentUrl === "index.html") ? "#card-element--green" : "./index.html#card-element--green", data-trigger=(currentUrl === "index.html") ? "#card-element--green" : null, aria-label="Go to selected link")!="RxPay"
+              each link in headerMainLinks
+                - const activeState = currentUrl === link.href
+                li.main-nav__item
+                  a.main-nav__link(href=link.href)
+                    +icon(`icon-${link.svg}`, 17, 17)
+                    span!=link.text

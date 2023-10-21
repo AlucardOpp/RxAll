@@ -1,0 +1,11 @@
+mixin review-card(data)
+  .review-card
+    .review-card__text-wrapper
+      p.review-card__text!=data.reviewText
+      a.btn.btn--transparent.review-card__button(href="./about.html" aria-label="Go to about page")!=data.reviewButton
+    .review-card__image-wrapper
+      .review-card__image
+        +picture("content", data.reviewImage, "jpg", 411, 411, "employee photo")
+      .review-card__info
+        p.review-card__name!=data.reviewName
+        p.review-card__position!=data.reviewPosition

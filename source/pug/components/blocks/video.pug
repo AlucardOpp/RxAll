@@ -1,0 +1,16 @@
+mixin video()
+  .video
+    .container
+      .video__wrap
+        .video__frame
+          .video__img
+            +picture('content', 'poster', 'jpg', 891, 502, '')
+            +btn({
+              icon: 'button-play',
+              width: 103,
+              height: 103
+            }).video__btn(aria-label='video', data-open-modal="video-1")
+        .video__text-block
+          p.video__title The inventor inspired by a near-death experience
+          p.video__desc This Nigerian entrepreneur nearly died after being given fake medicines. Now he's created something that can spot them.
+

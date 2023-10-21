@@ -1,0 +1,260 @@
+.contact-intro {
+  position: relative;
+  margin-top: 291px;
+  margin-bottom: 307px;
+
+  @include vp-1919 {
+    margin-top: 270px;
+    margin-bottom: 203px;
+  }
+
+  @include vp-1023 {
+    margin-top: 160px;
+    margin-bottom: 117px;
+  }
+
+  @include vp-767 {
+    margin-top: 306px;
+    margin-bottom: 35px;
+  }
+}
+
+.contact-intro::after {
+  content: "";
+  position: absolute;
+  bottom: -241px;
+  left: 0;
+  right: 0;
+  width: 68%;
+  height: 1px;
+  margin: 0 auto;
+  background-image: url('../img/svg/icon-point.svg');
+  background-size: 4px 1px;
+  border: 0;
+
+  @include vp-1919 {
+    bottom: -150px;
+    width: 63%;
+  }
+
+  @include vp-1023 {
+    width: 83%;
+    bottom: -60px;
+  }
+
+  @include vp-767 {
+   display: none;
+  }
+}
+
+.contact-intro__inner {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.contact-intro__text-wrapper {
+  max-width: 740px;
+  margin-left: 48px;
+
+  @include vp-1919 {
+    max-width: 580px;
+    margin-left: 43px;
+  }
+
+  @include vp-1023 {
+    max-width: 410px;
+    margin-left: 0;
+  }
+}
+
+.contact-intro__header,
+.contact-intro__text {
+  margin-top: 0;
+  color: $color-night-rider;
+}
+
+.contact-intro__header {
+  margin-bottom: 43px;
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 117px;
+  letter-spacing: 4px;
+
+  @include vp-1919 {
+    margin-bottom: 27px;
+    font-size: 76px;
+    line-height: 93px;
+    letter-spacing: 3px;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 19px;
+    font-size: 54px;
+    line-height: 66px;
+    letter-spacing: 2px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 10px;
+    font-size: 42px;
+    line-height: 51px;
+  }
+}
+
+.contact-intro__text {
+  margin-bottom: 0;
+  font-size: 20px;
+  line-height: 39px;
+
+  @include vp-1919 {
+    font-size: 20px;
+    line-height: 39px;
+  }
+
+  @include vp-1023 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.contact-intro__image {
+  border-radius: 400px;
+  transform: rotate(-45deg);
+  position: absolute;
+  background-color: transparent;
+}
+
+.contact-intro__image--red {
+  width: 227px;
+  height: 630px;
+  border: 1px solid $color-cinnabar;
+  opacity: 0.3;
+  top: -504px;
+  left: -321px;
+
+  @include vp-1919 {
+    top: -476px;
+    left: -325px;
+  }
+
+  @include vp-1023 {
+    width: 132px;
+    height: 270px;
+    top: -238px;
+    left: -76px;
+  }
+
+  @include vp-767 {
+    top: -332px;
+    left: -65px;
+  }
+}
+
+.contact-intro__image--blue {
+  width: 415px;
+  height: 1153px;
+  border: 1px solid $color-light-blue;
+  top: -900px;
+  left: 680px;
+
+  @include vp-1919 {
+    left: 650px;
+  }
+
+
+  @include vp-1023 {
+    width: 182px;
+    height: 492px;
+    top: -420px;
+    left: 436px;
+  }
+
+  @include vp-767 {
+    top: -287px;
+    left: 360px;
+  }
+}
+
+.contact-intro__image--picture {
+  width: 1025px;
+  height: 654px;
+  top: -322px;
+  right: -360px;
+  overflow: hidden;
+  transform: rotate(-46deg);
+
+  &[data-aos="contact-intro"] {
+    opacity: 0;
+    transform: rotate(-45deg) scale(0.5) translate3d(800px, -200px, 0);
+    transition-property: scale, transform, opacity;
+    &.aos-animate {
+      opacity: 1;
+      transform: rotate(-45deg) scale(1) translateZ(0);
+    }
+  }
+
+  @include vp-1919 {
+    width: 858px;
+    height: 589px;
+    top: -270px;
+    right: -319px;
+  }
+
+  @include vp-1023 {
+    width: 496px;
+    height: 310px;
+    top: -131px;
+    right: -160px;
+  }
+
+  @include vp-767 {
+    width: 350px;
+    height: 228px;
+    top: -268px;
+    right: -83px;
+    transform: rotate(-44deg);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1250px) {
+  .contact-intro__image--picture {
+    top: -299px;
+    right: -468px;
+  }
+}
+
+.contact-intro__image--picture img {
+  top: 5%;
+  right: 2%;
+  width: 81%;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  transform: rotate(45deg);
+
+  @include vp-1919 {
+    width: 92%;
+    top: 4%;
+    right: 3%;
+  }
+
+  @include vp-1023 {
+    width: 95%;
+    top: -15%;
+    right: 10%;
+  }
+}
+
+
+@media (min-width: 1950px) {
+  .contact-intro__image--picture img {
+    width: 100%;
+    top: -20px;
+    right: 4px;
+  }
+
+  .contact-intro__image--picture {
+    top: -205px;
+  }
+}

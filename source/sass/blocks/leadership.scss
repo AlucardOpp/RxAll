@@ -1,0 +1,400 @@
+.leadership {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @include vp-1919 {
+    padding-top: 39px;
+    padding-bottom: 175px;
+  }
+
+  @include vp-1023 {
+    padding-bottom: 65px;
+  }
+
+  @include vp-767 {
+    padding-top: 25px;
+    padding-bottom: 27px;
+  }
+
+  .container {
+    position: relative;
+
+    @include vp-1919 {
+      position: unset;
+    }
+  }
+
+  & + .partners {
+    padding-top: 97px;
+    padding-bottom: 80px;
+    padding-left: 0.6%;
+
+    @include vp-1919 {
+      margin-top: -111px;
+      padding-left: 0;
+    }
+
+    @include vp-1023 {
+      margin-top: -61px;
+      margin-bottom: 14px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 5px;
+    }
+
+    .partners__title {
+      margin-bottom: 30px;
+
+      @include vp-1919 {
+        margin-bottom: 18px;
+      }
+
+      @include vp-1023 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__wrap {
+    padding-left: 2.6%;
+    padding-right: 6.5%;
+
+    @include vp-1023 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 32px;
+    padding-left: 1.7%;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    @include vp-1919 {
+      margin-bottom: 18px;
+      padding-left: 0.6%;
+      font-size: 38px;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 21px;
+      padding-left: 0;
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    width: 47%;
+    margin: 0 0 53px;
+    padding-left: 1.7%;
+    line-height: 1.6;
+
+    @include vp-1919 {
+      width: 55%;
+      padding-left: 0.6%;
+    }
+
+    @include vp-1023 {
+      width: 100%;
+      margin-bottom: 44px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 31px;
+      padding-left: 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 46.5% 1fr;
+    grid-column-gap: 8%;
+    grid-row-gap: 88px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include vp-1919 {
+      grid-template-columns: 49% 1fr;
+      grid-column-gap: 3%;
+      grid-row-gap: 80px;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      grid-row-gap: 51px;
+    }
+  }
+
+  &__item {
+    display: flex;
+
+    @include vp-1023 {
+      display: grid;
+      grid-template-columns: 19.5% 1fr;
+      grid-gap: 3.2%;
+    }
+
+    @include vp-767 {
+      position: relative;
+      grid-template-columns: 1fr;
+      grid-gap: 12px;
+    }
+
+    &:last-child,
+    &:nth-last-child(2) {
+      .leadership__name {
+        @include vp-767 {
+          top: 8px;
+          max-width: 250px;
+        }
+      }
+
+      .leadership__position {
+        @include vp-767 {
+          top: 60px;
+        }
+      }
+    }
+
+    &.is-active {
+      @include vp-767 {
+        .leadership__dots {
+          display: none;
+        }
+
+        .leadership__more {
+          display: inline;
+        }
+
+        .leadership__read-more svg {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    min-width: 29.5%;
+    height: 0;
+    margin-right: 4.8%;
+    padding-bottom: calc(29.5% * 188 / 188);
+
+    @include vp-1919 {
+      min-width: 26.2%;
+      max-width: 26.2%;
+      padding-bottom: calc(26.2% * 133 / 136);
+    }
+
+    @include vp-1023 {
+      width: 100%;
+      min-width: unset;
+      max-width: unset;
+      margin-right: unset;
+      padding-bottom: calc(100% * 133 / 136);
+    }
+
+    @include vp-767 {
+      width: 31%;
+      padding-bottom: calc(31% * 133 / 136);
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    margin: 0 0 8px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    @include vp-1919 {
+      margin-bottom: 5px;
+      font-size: 28px;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 2px;
+    }
+
+    @include vp-767 {
+      position: absolute;
+      top: 20px;
+      left: 33.5%;
+      font-size: 20px;
+    }
+  }
+
+  &__position {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1.6;
+    color: $color-grey;
+
+    @include vp-1919 {
+      margin-bottom: 5px;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 13px;
+    }
+
+    @include vp-767 {
+      position: absolute;
+      top: 48px;
+      left: 33.5%;
+      font-size: 16px;
+    }
+  }
+
+  &__story {
+    flex-grow: 1;
+    margin: 0 0 20px;
+    line-height: 1.6;
+
+    @include vp-1919 {
+      margin-bottom: 16px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2px;
+
+    @include vp-1023 {
+      margin-left: 0;
+    }
+  }
+
+  &__socials-link {
+    margin: 0;
+    margin-right: 12px;
+    padding: 0;
+    background-color: $color-transparent;
+    transition: opacity $trans-default;
+    will-change: opacity;
+
+    @include vp-1023 {
+      margin-right: 24px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    svg {
+      @include vp-1023 {
+        width: 28px;
+        height: 30px;
+      }
+    }
+
+    @include hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__block {
+    @include vp-767 {
+      display: grid;
+      grid-template-columns: 55% 1fr;
+      padding-left: 1%;
+    }
+  }
+
+  &__read-more {
+    display: none;
+
+    @include vp-767 {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      padding: 0;
+      color: $color-summer-sky;
+      background-color: $color-transparent;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 400;
+      transition: opacity $trans-default;
+      -webkit-tap-highlight-color: $color-transparent;
+      outline: none;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
+    }
+
+    svg {
+      margin-left: 15px;
+      fill: $color-summer-sky;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__dots {
+    display: none;
+
+    @include vp-767 {
+      display: inline;
+    }
+  }
+
+  &__more {
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__pattern {
+    position: absolute;
+    right: -108%;
+    bottom: 361px;
+    width: 2014px;
+    height: 550px;
+    border-radius: 483px;
+    background-color: $color-cinnabar;
+    transform: rotate(-42deg);
+    z-index: -1;
+
+    @include vp-1919 {
+      bottom: 250px;
+      right: -33.8vw;
+      width: 48.9%;
+      height: 25.2vw;
+    }
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+  }
+}

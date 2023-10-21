@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RxAll</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="RxAll">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest" crossorigin="use-credentials">
+    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/montserrat-black.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container"><a class="header__logo" href="./index.html" aria-label="Go to home page">
+            <svg width="71" height="35" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+            </svg></a>
+          <nav class="main-nav">
+            <button class="main-nav__toggle btn-reset" type="button" aria-label="Menu display switch" aria-pressed="false"><span class="main-nav__toggle-open">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-toggle-open"></use>
+                </svg></span><span class="main-nav__toggle-close">
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon-toggle-close"></use>
+                </svg></span></button>
+            <div class="main-nav__container">
+              <div class="main-nav__wrapper">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item main-nav__item--list"><span class="main-nav__link">
+                      <svg width="17" height="17" aria-hidden="true">
+                        <use xlink:href="img/sprite_auto.svg#icon-our-products"></use>
+                      </svg><span>Our products</span></span>
+                    <div class="main-nav__sublist-wrapper">
+                      <ul class="main-nav__sublist">
+                        <li class="main-nav__subitem"><a class="main-nav__sublink" href="./rx-scanner.html" aria-label="Go to selected link">RxScanner</a></li>
+                        <li class="main-nav__subitem"><a class="main-nav__sublink" href="https://rxalldelivered.com/" target="_blank" aria-label="Go to selected link">RxDelivered</a></li>
+                        <li class="main-nav__subitem"><a class="main-nav__sublink" href="./index.html#card-element--green" aria-label="Go to selected link">RxPay</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="./about.html">
+                      <svg width="17" height="17" aria-hidden="true">
+                        <use xlink:href="img/sprite_auto.svg#icon-about"></use>
+                      </svg><span>About RxAll</span></a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="https://www.facebook.com/RxAll.Inc/">
+                      <svg width="17" height="17" aria-hidden="true">
+                        <use xlink:href="img/sprite_auto.svg#icon-community"></use>
+                      </svg><span>Community portal</span></a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="./contact-us.html">
+                      <svg width="17" height="17" aria-hidden="true">
+                        <use xlink:href="img/sprite_auto.svg#icon-contact"></use>
+                      </svg><span>Contact us</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <section class="about-intro">
+          <div class="container">
+            <h2 class="about-intro__title" data-aos="fade-right">Stop the<span data-aos="fade-right" data-aos-delay="500">Guessing game</span></h2>
+            <p class="about-intro__text" data-aos="fade-right" data-aos-delay="600">People in Africa need access to affordable, accessible and safe medicines</p>
+            <p class="about-intro__text about-intro__text--small" data-aos="fade-right" data-aos-delay="700" data-aos-anchor=".about-intro">Backed by unique technologies, industry experience, and science, our team helps healthcare companies gain access to high-quality medicines, helps patients make the right choices, and creates a safer world.</p>
+            <div class="about-intro__images">
+              <div class="about-intro__pattern about-intro__pattern--1"></div>
+              <div class="about-intro__pattern about-intro__pattern--2"></div>
+              <div class="about-intro__img" data-aos="about-intro" data-aos-duration="1000">
+                <picture>
+                  <source type="image/webp" srcset="img/content/about-intro.webp, img/content/about-intro@2x.webp 2x"><img src="img/content/about-intro.jpg" srcset="img/content/about-intro@2x.jpg 2x" width="1321" height="1323" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="story" data-animate>
+          <div class="container">
+            <h2 class="story__title" data-aos="fade-right">Our story</h2>
+            <div class="story__wrap">
+              <div class="story__block">
+                <div class="story__img" data-aos="fade-right" data-aos-delay="500">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/about-story.webp, img/content/about-story@2x.webp 2x"><img src="img/content/about-story.png" srcset="img/content/about-story@2x.png 2x" width="350" height="349" alt="">
+                  </picture>
+                </div>
+                <div class="story__name-wrap">
+                  <p class="story__name" data-aos="fade-right" data-aos-delay="600" data-aos-anchor=".story__img">Adebayo Alonge</p><span class="story__position" data-aos="fade-right" data-aos-delay="700" data-aos-anchor=".story__img">RxAll CEO and Founder</span>
+                </div>
+              </div>
+              <ul class="story__list">
+                <li class="story__item story__item--1" data-aos="fade-left" data-aos-delay="500">Imagine purchasing some <span>medicine</span> at your local pharmacy and falling into a coma for 21 days after taking it.</li>
+                <li class="story__item story__item--2" data-aos="fade-left" data-aos-delay="600">This <span>happened to me</span> when I was 15 years old. Fortunately, I pulled through and got a second chance at life, but most fake drug victims are not so lucky.</li>
+                <li class="story__item story__item--3" data-aos="fade-left" data-aos-delay="700">Fake drugs kill 1,000,000 people each year. <span>Over 50% of drugs</span> in some markets are substandard, and people have no way of knowing the quality before they use them.</li>
+                <li class="story__item story__item--4" data-aos="fade-left" data-aos-delay="800">That experience of suffering from the effects of a fake drug — as well as the belief that science and technology should serve the public good — <span>inspired me to launch RxAll.</span></li>
+                <li class="story__item story__item--5" data-aos="fade-left" data-aos-delay="900"><span>Our mission</span> is to make sure that no one dies from counterfeit or substandard drugs anywhere in Africa.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="achievement" data-animate>
+          <div class="container">
+            <h2 class="visually-hidden">Achievement</h2>
+            <div class="achievement__block">
+              <div class="achievement__block-pattern" data-aos="about-pattern" data-aos-duration="1000"></div>
+              <div class="achievement__block-text">
+                <p class="achievement__block-title">World that <span>we create</span> is the world where everyone <span>can trust medicine</span>.</p>
+                <p class="achievement__block-title">Where medicine will <span>make us well</span>, not sick.</p>
+              </div>
+              <ul class="achievement__progress">
+                <li class="achievement__progress-item achievement__progress-item--1" data-aos="fade" data-aos-duration="1500" data-aos-delay="400" data-aos-anchor=".achievement__progress">
+                  <p class="achievement__progress-number">6 years</p><span class="achievement__progress-desc">Of experience</span>
+                </li>
+                <li class="achievement__progress-item achievement__progress-item--2" data-aos="fade" data-aos-duration="1500" data-aos-delay="600" data-aos-anchor=".achievement__progress">
+                  <p class="achievement__progress-number">300+</p><span class="achievement__progress-desc">Drugs types tested</span>
+                </li>
+                <li class="achievement__progress-item achievement__progress-item--3" data-aos="fade" data-aos-duration="1500" data-aos-delay="500" data-aos-anchor=".achievement__progress">
+                  <p class="achievement__progress-number">2.5mln+</p><span class="achievement__progress-desc">Lives protected</span>
+                </li>
+                <li class="achievement__progress-item achievement__progress-item--4" data-aos="fade" data-aos-duration="1500" data-aos-delay="700" data-aos-anchor=".achievement__progress">
+                  <p class="achievement__progress-number">200+</p><span class="achievement__progress-desc">Pharmacy partners</span>
+                </li>
+              </ul>
+            </div>
+            <div class="achievement__transformation">
+              <div class="achievement__transformation-pattern" data-aos="about-pattern" data-aos-duration="1000"></div>
+              <p class="achievement__transformation-title">Values-driven transformation</p>
+              <ul class="achievement__transformation-list">
+                <li class="achievement__transformation-item achievement__transformation-item--1" data-aos="fade" data-aos-duration="1500" data-aos-delay="500" data-aos-anchor=".achievement__transformation-list">
+                  <svg width="68" height="68" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#icon-transformation-1"></use>
+                  </svg>
+                  <div class="achievement__transformation__block">
+                    <p class="achievement__transformation-subtitle">Innovative</p>
+                    <p class="achievement__transformation-text">We emphasize science and harness the power of technology to solve global healthcare challenges.</p>
+                  </div>
+                </li>
+                <li class="achievement__transformation-item achievement__transformation-item--2" data-aos="fade" data-aos-duration="1500" data-aos-delay="600" data-aos-anchor=".achievement__transformation-list">
+                  <svg width="68" height="68" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#icon-transformation-2"></use>
+                  </svg>
+                  <div class="achievement__transformation__block">
+                    <p class="achievement__transformation-subtitle">Open minded</p>
+                    <p class="achievement__transformation-text">We strive for continuous improvement, learn from those around us, and challenge the status quo.</p>
+                  </div>
+                </li>
+                <li class="achievement__transformation-item achievement__transformation-item--3" data-aos="fade" data-aos-duration="1500" data-aos-delay="700" data-aos-anchor=".achievement__transformation-list">
+                  <svg width="68" height="68" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#icon-transformation-3"></use>
+                  </svg>
+                  <div class="achievement__transformation__block">
+                    <p class="achievement__transformation-subtitle">Co-impacting</p>
+                    <p class="achievement__transformation-text">We believe that only together, with support and cooperation, we can make a difference in the world.</p>
+                  </div>
+                </li>
+                <li class="achievement__transformation-item achievement__transformation-item--4" data-aos="fade" data-aos-duration="1500" data-aos-delay="800" data-aos-anchor=".achievement__transformation-list">
+                  <svg width="68" height="68" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#icon-transformation-4"></use>
+                  </svg>
+                  <div class="achievement__transformation__block">
+                    <p class="achievement__transformation-subtitle">Passionate</p>
+                    <p class="achievement__transformation-text">We rise every morning to ensure a future where everyone has access to safe drugs.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="leadership">
+          <div class="container">
+            <div class="leadership__wrap">
+              <h2 class="leadership__title">Expert leadership</h2>
+              <p class="leadership__text">Dedicated to making an impact, the highly experienced, and innovative minds of RxAll come together to protect people from counterfeit drugs.</p>
+              <ul class="leadership__list">
+                <li class="leadership__item">
+                  <div class="leadership__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/about-leadership-1.webp, img/content/about-leadership-1@2x.webp 2x"><img src="img/content/about-leadership-1.png" srcset="img/content/about-leadership-1@2x.png 2x" width="188" height="188" alt="Adebayo Alonge">
+                    </picture>
+                  </div>
+                  <div class="leadership__desc">
+                    <p class="leadership__name">Adebayo Alonge</p><span class="leadership__position">Founder/CEO</span>
+                    <p class="leadership__story">Adebayo is&nbsp;a&nbsp;pharmacist and market development professional with a&nbsp;business degree from Yale.<span class="leadership__dots">..</span><span class="leadership__more"> He has 10+&nbsp;years in&nbsp;market development and strategy consulting across Africa, working with BCG, BASF, Roche, and Sanofi. Adebayo speaks annually on Social Impact and Tech, including recent speeches at&nbsp;the Japan-Africa Business Forum, Hello Tomorrow, Lagos Business School, MoHo, etc.</span></p>
+                    <div class="leadership__block">
+                      <div class="leadership__socials">
+                        <a class="btn leadership__socials-link" href="https://www.linkedin.com/in/adebayo-a-309b1814/" aria-label="LinkedIn">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-1"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="https://twitter.com/RxAll_Inc" aria-label="Twitter">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-2"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="#" aria-label="link">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-3"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <button class="btn leadership__read-more" type="button" data-btn-text="Show less" data-btn-more="Show more" data-read-more><span>Show more</span>
+                        <svg width="8" height="16" aria-hidden="true">
+                          <use xlink:href="img/sprite_auto.svg#icon-read-more"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="leadership__item">
+                  <div class="leadership__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/about-leadership-2.webp, img/content/about-leadership-2@2x.webp 2x"><img src="img/content/about-leadership-2.png" srcset="img/content/about-leadership-2@2x.png 2x" width="188" height="188" alt="Amy Kao">
+                    </picture>
+                  </div>
+                  <div class="leadership__desc">
+                    <p class="leadership__name">Amy Kao</p><span class="leadership__position">Co-Founder/CMO</span>
+                    <p class="leadership__story">Amy is&nbsp;a&nbsp;graduate of&nbsp;the Yale School of Management MBA program and holds a&nbsp;Bachelor of&nbsp;Science<span class="leadership__dots">...</span><span class="leadership__more"> degree from Carnegie Mellon University. She has 5+&nbsp;years of&nbsp;management consulting experience with global pharmaceutical companies in&nbsp;New York and Asia and has a&nbsp;strong focus on&nbsp;go-to-market strategy in&nbsp;emerging markets. Amy is a TEDx speaker and guest speaker at&nbsp;other events.</span></p>
+                    <div class="leadership__block">
+                      <div class="leadership__socials">
+                        <a class="btn leadership__socials-link" href="https://www.linkedin.com/in/amykao02/" aria-label="LinkedIn">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-1"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="https://twitter.com/RxAll_Inc" aria-label="Twitter">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-2"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="#" aria-label="link">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-3"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <button class="btn leadership__read-more" type="button" data-btn-text="Show less" data-btn-more="Show more" data-read-more><span>Show more</span>
+                        <svg width="8" height="16" aria-hidden="true">
+                          <use xlink:href="img/sprite_auto.svg#icon-read-more"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="leadership__item">
+                  <div class="leadership__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/about-leadership-3.webp, img/content/about-leadership-3@2x.webp 2x"><img src="img/content/about-leadership-3.png" srcset="img/content/about-leadership-3@2x.png 2x" width="188" height="188" alt="Duncan Turner">
+                    </picture>
+                  </div>
+                  <div class="leadership__desc">
+                    <p class="leadership__name">Duncan Turner</p><span class="leadership__position">Advisor</span>
+                    <p class="leadership__story">Duncan is&nbsp;General Partner at&nbsp;SOSV and Managing Director of&nbsp;HAX Shenzhen, the world&rsquo;s first<span class="leadership__dots">...</span><span class="leadership__more"> and largest VC-backed program for Hard Tech. He&nbsp;has marketed numerous hardware products, from first concepts to&nbsp;final sales. Duncan is&nbsp;an&nbsp;entrepreneur with an&nbsp;extensive background in&nbsp;businesses development and a&nbsp;Master&rsquo;s degree from the Royal College of&nbsp;Art &amp;&nbsp;Imperial College.</span></p>
+                    <div class="leadership__block">
+                      <div class="leadership__socials">
+                        <a class="btn leadership__socials-link" href="https://www.linkedin.com/in/duncan-turner-b08630/" aria-label="LinkedIn">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-1"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="https://twitter.com/DuncanAJTurner" aria-label="Twitter">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-2"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="#" aria-label="link">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-3"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <button class="btn leadership__read-more" type="button" data-btn-text="Show less" data-btn-more="Show more" data-read-more><span>Show more</span>
+                        <svg width="8" height="16" aria-hidden="true">
+                          <use xlink:href="img/sprite_auto.svg#icon-read-more"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="leadership__item">
+                  <div class="leadership__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/about-leadership-4.webp, img/content/about-leadership-4@2x.webp 2x"><img src="img/content/about-leadership-4.png" srcset="img/content/about-leadership-4@2x.png 2x" width="188" height="188" alt="Zachariah George">
+                    </picture>
+                  </div>
+                  <div class="leadership__desc">
+                    <p class="leadership__name">Zachariah George</p><span class="leadership__position">Advisor</span>
+                    <p class="leadership__story">Zachariah is&nbsp;the Managing Partner at&nbsp;Launch Africa Ventures, the leading Early-Stage VC&nbsp;Fund, and<span class="leadership__dots">...</span><span class="leadership__more"> the co-founder and CIO of&nbsp;startup boot camp AfroTech, the leading venture accelerator program in&nbsp;Africa. He&nbsp;has a&nbsp;Master&rsquo;s degree in&nbsp;Finance &amp;&nbsp;Management from Stanford University and a&nbsp;Bachelor&rsquo;s degree in&nbsp;Mechanical Engineering from the Indian Institute of&nbsp;Technology.</span></p>
+                    <div class="leadership__block">
+                      <div class="leadership__socials">
+                        <a class="btn leadership__socials-link" href="https://www.linkedin.com/in/zachariahgeorge/" aria-label="LinkedIn">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-1"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="https://twitter.com/zach_cpt" aria-label="Twitter">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-2"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="#" aria-label="link">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-3"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <button class="btn leadership__read-more" type="button" data-btn-text="Show less" data-btn-more="Show more" data-read-more><span>Show more</span>
+                        <svg width="8" height="16" aria-hidden="true">
+                          <use xlink:href="img/sprite_auto.svg#icon-read-more"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="leadership__item">
+                  <div class="leadership__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/about-leadership-5.webp, img/content/about-leadership-5@2x.webp 2x"><img src="img/content/about-leadership-5.png" srcset="img/content/about-leadership-5@2x.png 2x" width="188" height="188" alt="Mbwana Alliy">
+                    </picture>
+                  </div>
+                  <div class="leadership__desc">
+                    <p class="leadership__name">Mbwana Alliy</p><span class="leadership__position">Advisor</span>
+                    <p class="leadership__story">Mbwana is&nbsp;the founder and managing partner at Savannah Fund, Africa&rsquo;s leading Venture<span class="leadership__dots">...</span><span class="leadership__more"> Capital fund seed investments in&nbsp;e-commerce, gaming, education technology, and social networking. He is an&nbsp;experienced product manager in&nbsp;consumer web, enterprise Software &amp;&nbsp;SaaS with a&nbsp;Bachelor&rsquo;s Engineering degree from Bristol University and an MBA from Stanford Graduate school of&nbsp;Business.</span></p>
+                    <div class="leadership__block">
+                      <div class="leadership__socials">
+                        <a class="btn leadership__socials-link" href="https://www.linkedin.com/in/mbwana/" aria-label="LinkedIn">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-1"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="https://twitter.com/Mbwana" aria-label="Twitter">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-2"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="#" aria-label="link">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-3"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <button class="btn leadership__read-more" type="button" data-btn-text="Show less" data-btn-more="Show more" data-read-more><span>Show more</span>
+                        <svg width="8" height="16" aria-hidden="true">
+                          <use xlink:href="img/sprite_auto.svg#icon-read-more"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="leadership__item">
+                  <div class="leadership__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/about-leadership-6.webp, img/content/about-leadership-6@2x.webp 2x"><img src="img/content/about-leadership-6.png" srcset="img/content/about-leadership-6@2x.png 2x" width="188" height="188" alt="Idris Ayodeji">
+                    </picture>
+                  </div>
+                  <div class="leadership__desc">
+                    <p class="leadership__name">Idris Ayodeji</p><span class="leadership__position">Advisor</span>
+                    <p class="leadership__story">Idris is&nbsp;a&nbsp;Founding Partner at&nbsp;Loftyinc Capital Management, owner of&nbsp;the early-stage Afropreneurs Fund<span class="leadership__dots">...</span><span class="leadership__more"> (I&amp;II), and co-founder of&nbsp;The Wennovation Hub, a&nbsp;leading Nigerian innovation accelerator for social impact tech startups. He&nbsp;has an&nbsp;MBA in&nbsp;Entrepreneurship &amp;&nbsp;Strategy from Rice University, and an M.Sc in&nbsp;Global Health Science from Oxford University.</span></p>
+                    <div class="leadership__block">
+                      <div class="leadership__socials">
+                        <a class="btn leadership__socials-link" href="https://www.linkedin.com/in/belloidris/" aria-label="LinkedIn">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-1"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="https://www.linkedin.com/in/belloidris/" aria-label="Twitter">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-2"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="#" aria-label="link">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-3"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <button class="btn leadership__read-more" type="button" data-btn-text="Show less" data-btn-more="Show more" data-read-more><span>Show more</span>
+                        <svg width="8" height="16" aria-hidden="true">
+                          <use xlink:href="img/sprite_auto.svg#icon-read-more"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="leadership__item">
+                  <div class="leadership__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/about-leadership-7.webp, img/content/about-leadership-7@2x.webp 2x"><img src="img/content/about-leadership-7.png" srcset="img/content/about-leadership-7@2x.png 2x" width="188" height="188" alt="Michael Olusegun Olukoya">
+                    </picture>
+                  </div>
+                  <div class="leadership__desc">
+                    <p class="leadership__name">Michael Olusegun Olukoya</p><span class="leadership__position">Advisor</span>
+                    <p class="leadership__story">Olusegun heads the Financial Services and Payments division of NEXTZON Business Services<span class="leadership__dots">...</span><span class="leadership__more">, a leading management consulting and venture development firm in&nbsp;Nigeria. He&nbsp;is&nbsp;an&nbsp;experienced professional in&nbsp;strategy formulation, project execution, financial services, corporate governance, and eBusiness with a&nbsp;Bachelor&rsquo;s Science degree in&nbsp;Economics from the University of&nbsp;Lagos.</span></p>
+                    <div class="leadership__block">
+                      <div class="leadership__socials">
+                        <a class="btn leadership__socials-link" href="https://www.linkedin.com/company/rxall-inc./" aria-label="LinkedIn">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-1"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="https://twitter.com/RxAll_Inc" aria-label="Twitter">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-2"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="#" aria-label="link">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-3"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <button class="btn leadership__read-more" type="button" data-btn-text="Show less" data-btn-more="Show more" data-read-more><span>Show more</span>
+                        <svg width="8" height="16" aria-hidden="true">
+                          <use xlink:href="img/sprite_auto.svg#icon-read-more"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="leadership__item">
+                  <div class="leadership__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/about-leadership-8.webp, img/content/about-leadership-8@2x.webp 2x"><img src="img/content/about-leadership-8.png" srcset="img/content/about-leadership-8@2x.png 2x" width="188" height="188" alt="Dr. Akintoye Akindele">
+                    </picture>
+                  </div>
+                  <div class="leadership__desc">
+                    <p class="leadership__name">Dr. Akintoye Akindele</p><span class="leadership__position">Advisor</span>
+                    <p class="leadership__story">Dr. Akindele is&nbsp;Chairman/CEO of&nbsp;Platform Capital Group, an&nbsp;investment firm focused<span class="leadership__dots">...</span><span class="leadership__more"> on&nbsp;business growth and expansion in&nbsp;South Africa. He&nbsp;is&nbsp;also Chairman/CEO of&nbsp;Atlantic &amp;&nbsp;Duport Midstream and a&nbsp;frequent speaker at&nbsp;conferences. Dr. Akindele is&nbsp;a&nbsp;CFA Charterholder and holds a&nbsp;PhD in&nbsp;Business Administration (Finance) from the International School of&nbsp;Management in&nbsp;Paris.</span></p>
+                    <div class="leadership__block">
+                      <div class="leadership__socials">
+                        <a class="btn leadership__socials-link" href="https://www.linkedin.com/company/rxall-inc./" aria-label="LinkedIn">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-1"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="https://twitter.com/RxAll_Inc" aria-label="Twitter">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-2"></use>
+                          </svg>
+                        </a>
+                        <a class="btn leadership__socials-link" href="#" aria-label="link">
+                          <svg width="20" height="21" aria-hidden="true">
+                            <use xlink:href="img/sprite_auto.svg#icon-about-socials-3"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <button class="btn leadership__read-more" type="button" data-btn-text="Show less" data-btn-more="Show more" data-read-more><span>Show more</span>
+                        <svg width="8" height="16" aria-hidden="true">
+                          <use xlink:href="img/sprite_auto.svg#icon-read-more"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="leadership__pattern"></div>
+            </div>
+          </div>
+        </section>
+        <section class="partners" id="partners">
+          <div class="container">
+            <div class="partners__text-content">
+              <h2 class="partners__title">Partners</h2>
+              <p class="partners__description">We&nbsp;are supported by&nbsp;leading investors, academics and donors. Join&nbsp;us to&nbsp;get our solution into every FDA, hospital and pharmacy across the world.</p>
+            </div>
+            <div class="partners__slider swiper">
+              <div class="partners__slider-wrapper swiper-wrapper">
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__image-background"></div>
+                  <div class="partners__image"><a>
+                      <picture>
+                        <source type="image/webp" srcset="img/content/partners/partners-image-katapult.webp, img/content/partners/partners-image-katapult@2x.webp 2x"><img src="img/content/partners/partners-image-katapult.png" srcset="img/content/partners/partners-image-katapult@2x.png 2x" width="304" height="134" alt="katapult">
+                      </picture></a></div>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__image-background"></div>
+                  <div class="partners__image"><a>
+                      <picture>
+                        <source type="image/webp" srcset="img/content/partners/partners-image-plug-and-play.webp, img/content/partners/partners-image-plug-and-play@2x.webp 2x"><img src="img/content/partners/partners-image-plug-and-play.png" srcset="img/content/partners/partners-image-plug-and-play@2x.png 2x" width="325" height="93" alt="plug-and-play">
+                      </picture></a></div>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__image-background"></div>
+                  <div class="partners__image"><a>
+                      <picture>
+                        <source type="image/webp" srcset="img/content/partners/partners-image-sosv.webp, img/content/partners/partners-image-sosv@2x.webp 2x"><img src="img/content/partners/partners-image-sosv.png" srcset="img/content/partners/partners-image-sosv@2x.png 2x" width="205" height="89" alt="sosv">
+                      </picture></a></div>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__image-background"></div>
+                  <div class="partners__image"><a>
+                      <picture>
+                        <source type="image/webp" srcset="img/content/partners/partners-image-launch-africa.webp, img/content/partners/partners-image-launch-africa@2x.webp 2x"><img src="img/content/partners/partners-image-launch-africa.png" srcset="img/content/partners/partners-image-launch-africa@2x.png 2x" width="200" height="200" alt="launch-africa">
+                      </picture></a></div>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__image-background"></div>
+                  <div class="partners__image"><a>
+                      <picture>
+                        <source type="image/webp" srcset="img/content/partners/partners-image-century-oak-capital.webp, img/content/partners/partners-image-century-oak-capital@2x.webp 2x"><img src="img/content/partners/partners-image-century-oak-capital.png" srcset="img/content/partners/partners-image-century-oak-capital@2x.png 2x" width="571" height="88" alt="century-oak-capital">
+                      </picture></a></div>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__image-background"></div>
+                  <div class="partners__image"><a>
+                      <picture>
+                        <source type="image/webp" srcset="img/content/partners/partners-image-lofty-inc.webp, img/content/partners/partners-image-lofty-inc@2x.webp 2x"><img src="img/content/partners/partners-image-lofty-inc.png" srcset="img/content/partners/partners-image-lofty-inc@2x.png 2x" width="200" height="205" alt="lofty-inc">
+                      </picture></a></div>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__image-background"></div>
+                  <div class="partners__image"><a>
+                      <picture>
+                        <source type="image/webp" srcset="img/content/partners/partners-image-future-africa.webp, img/content/partners/partners-image-future-africa@2x.webp 2x"><img src="img/content/partners/partners-image-future-africa.png" srcset="img/content/partners/partners-image-future-africa@2x.png 2x" width="1247" height="548" alt="future-africa">
+                      </picture></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="partners__pagination swiper-pagination"></div>
+            <div class="partners__button partners__button--next swiper-button-next"></div>
+            <div class="partners__button partners__button--prev swiper-button-prev"></div>
+          </div>
+        </section>
+        <section class="partners partners--text" id="media">
+          <div class="container">
+            <div class="partners__text-content">
+              <h2 class="partners__title">Writing about us</h2>
+            </div>
+            <div class="partners__slider swiper">
+              <div class="partners__slider-wrapper swiper-wrapper">
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__image-background"></div>
+                  <div class="partners__image"><a href="https://www.bbc.com/news/av/stories-59995066">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/partners/partners-image-bbc.webp, img/content/partners/partners-image-bbc@2x.webp 2x"><img src="img/content/partners/partners-image-bbc.png" srcset="img/content/partners/partners-image-bbc@2x.png 2x" width="161" height="103" alt="bbc">
+                      </picture></a></div>
+                  <p class="partners__slide-title">The&quot;RxScanner&quot; inventor inspired by&nbsp;a&nbsp;near death experience&nbsp;&mdash; BBC</p>
+                  <p class="partners__slide-text">Adebayo Alonge started the RxAll company and produced the RxScanner to&nbsp;get quality medicines to&nbsp;every patient across the world...</p>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__image-background"></div>
+                  <div class="partners__image"><a href="https://www.chemistryworld.com/news/fighting-fake-medicines/3010498.article">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/partners/partners-image-chemistry-world.webp, img/content/partners/partners-image-chemistry-world@2x.webp 2x"><img src="img/content/partners/partners-image-chemistry-world.png" srcset="img/content/partners/partners-image-chemistry-world@2x.png 2x" width="325" height="28" alt="chemistry-world">
+                      </picture></a></div>
+                  <p class="partners__slide-title">Fighting fake medicines</p>
+                  <p class="partners__slide-text">One in&nbsp;10&nbsp;medicines sold in&nbsp;developing countries is&nbsp;counterfeit, leading to&nbsp;tens of&nbsp;thousands of&nbsp;deaths, as&nbsp;well as&nbsp;antimicrobial resistance...</p>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__image-background"></div>
+                  <div class="partners__image"><a href="https://www.theguardian.com/global-development/2019/jun/05/fake-medicine-makers-blockchain-artificial-intelligence">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/partners/partners-image-the-guardian.webp, img/content/partners/partners-image-the-guardian@2x.webp 2x"><img src="img/content/partners/partners-image-the-guardian.png" srcset="img/content/partners/partners-image-the-guardian@2x.png 2x" width="305" height="152" alt="the-guardian">
+                      </picture></a></div>
+                  <p class="partners__slide-title">Fight the fakes: how to&nbsp;beat the $200bn medicine counterfeiters</p>
+                  <p class="partners__slide-text">Armed with blockchain and&nbsp;AI, health workers and campaigners are battling the bogus business that kills thousands</p>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__image-background"></div>
+                  <div class="partners__image"><a href="https://www.bbc.com/news/av/stories-59995066">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/partners/partners-image-bbc.webp, img/content/partners/partners-image-bbc@2x.webp 2x"><img src="img/content/partners/partners-image-bbc.png" srcset="img/content/partners/partners-image-bbc@2x.png 2x" width="161" height="103" alt="bbc">
+                      </picture></a></div>
+                  <p class="partners__slide-title">The&quot;RxScanner&quot; inventor inspired by&nbsp;a&nbsp;near death experience&nbsp;&mdash; BBC</p>
+                  <p class="partners__slide-text">Adebayo Alonge started the RxAll company and produced the RxScanner to&nbsp;get quality medicines to&nbsp;every patient across the world...</p>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__image-background"></div>
+                  <div class="partners__image"><a href="https://www.chemistryworld.com/news/fighting-fake-medicines/3010498.article">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/partners/partners-image-chemistry-world.webp, img/content/partners/partners-image-chemistry-world@2x.webp 2x"><img src="img/content/partners/partners-image-chemistry-world.png" srcset="img/content/partners/partners-image-chemistry-world@2x.png 2x" width="325" height="28" alt="chemistry-world">
+                      </picture></a></div>
+                  <p class="partners__slide-title">Fighting fake medicines</p>
+                  <p class="partners__slide-text">One in&nbsp;10&nbsp;medicines sold in&nbsp;developing countries is&nbsp;counterfeit, leading to&nbsp;tens of&nbsp;thousands of&nbsp;deaths, as&nbsp;well as&nbsp;antimicrobial resistance...</p>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__image-background"></div>
+                  <div class="partners__image"><a href="https://www.theguardian.com/global-development/2019/jun/05/fake-medicine-makers-blockchain-artificial-intelligence">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/partners/partners-image-the-guardian.webp, img/content/partners/partners-image-the-guardian@2x.webp 2x"><img src="img/content/partners/partners-image-the-guardian.png" srcset="img/content/partners/partners-image-the-guardian@2x.png 2x" width="305" height="152" alt="the-guardian">
+                      </picture></a></div>
+                  <p class="partners__slide-title">Fight the fakes: how to&nbsp;beat the $200bn medicine counterfeiters</p>
+                  <p class="partners__slide-text">Armed with blockchain and&nbsp;AI, health workers and campaigners are battling the bogus business that kills thousands</p>
+                </div>
+              </div>
+            </div>
+            <div class="partners__pagination swiper-pagination"></div>
+            <div class="partners__button partners__button--next swiper-button-next"></div>
+            <div class="partners__button partners__button--prev swiper-button-prev"></div>
+          </div>
+        </section>
+        <div class="video">
+          <div class="container">
+            <div class="video__wrap">
+              <div class="video__frame">
+                <div class="video__img">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/poster.webp, img/content/poster@2x.webp 2x"><img src="img/content/poster.jpg" srcset="img/content/poster@2x.jpg 2x" width="891" height="502" alt="">
+                  </picture>
+                  <button class="btn video__btn" type="button" aria-label="video" data-open-modal="video-1">
+                    <svg width="103" height="103" aria-hidden="true">
+                      <use xlink:href="img/sprite_auto.svg#button-play"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="video__text-block">
+                <p class="video__title">The inventor inspired by a near-death experience</p>
+                <p class="video__desc">This Nigerian entrepreneur nearly died after being given fake medicines. Now he's created something that can spot them.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form">
+          <div class="container">
+            <div class="form__wrap">
+              <div class="form__block">
+                <p class="form__title">Сontact us</p>
+                <p class="form__text">Tell us about your challenges, and we'll provide the best solution.</p>
+                <div class="form__fields" data-validate>
+                  <form action="#" method="get">
+                    <div class="custom-input" data-validate-type="text">
+                      <label><span class="custom-input__label">Name</span>
+                        <input type="text" placeholder="First name">
+                      </label>
+                    </div>
+                    <div class="custom-input" data-validate-type="email">
+                      <label><span class="custom-input__label">E-mail</span>
+                        <input type="email" placeholder="name@domain.com">
+                      </label>
+                    </div>
+                    <div class="custom-textarea" data-validate-type="text">
+                      <label><span class="custom-textarea__label">Message</span>
+                        <textarea placeholder="Tell us what you want to discuss"></textarea>
+                      </label>
+                    </div>
+                    <button class="btn form__submit" type="submit">Send
+                      <svg width="16" height="14" aria-hidden="true">
+                        <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="form__box">
+                <p class="form__box-title">Get involved</p>
+                <p class="form__box-text">Join our global network community to be aware and share knowledge about the real danger of fake drugs.</p>
+                <a class="btn form__box-btn" href="https://www.facebook.com/RxAll.Inc/">Help the world
+                  <svg width="20" height="20" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#icon-earth"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="form__pattern"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__logo"><a href="index.html" aria-label="go to main page"><img src="img/sprite/icon-logo.svg" width="106" height="52" alt="rxall logo"></a>
+            <p>RxAll&nbsp;©&nbsp;2022</p>
+          </div>
+          <div class="footer__links">
+            <div>
+              <h3>Company</h3>
+              <ul>
+                <li><a href="rx-scanner.html">RxScanner</a>
+                </li>
+                <li><a href="https://www.facebook.com/RxAll.Inc/">Community portal</a>
+                </li>
+                <li><a href="about.html">About&nbsp;RxAll</a>
+                </li>
+                <li><a href="contact-us.html">Contact&nbsp;Us</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Services</h3>
+              <ul>
+                <li><a href="./index.html#for-buyers">For&nbsp;Buyers</a>
+                </li>
+                <li><a href="./index.html#pharmacies">Pharmacies</a>
+                </li>
+                <li><a href="./index.html#government">Government</a>
+                </li>
+                <li><a href="./index.html#lenders">Lenders</a>
+                </li>
+                <li><a href="./index.html#for-wholesalers">For&nbsp;Wholesalers</a>
+                </li>
+                <li><a href="./index.html#hospitals">Hospitals</a>
+                </li>
+                <li><a href="./index.html#insurance">Insurance</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal modal--preload modal--video modal--video-1" data-modal="video-1">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-video" data-iframe data-iframe-src="https://www.youtube.com/embed/p0HxjXVP2XE?enablejsapi=1">
+            <iframe width="1153" height="648" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Close popup" data-close-modal>
+            <svg width="16" height="17" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--video modal--video-2" data-modal="video-2">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-video" data-iframe data-iframe-src="https://www.youtube.com/embed/PF8PQWoKpgs?enablejsapi=1">
+            <iframe width="1153" height="648" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Close popup" data-close-modal>
+            <svg width="16" height="17" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

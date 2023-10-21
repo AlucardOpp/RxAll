@@ -1,0 +1,60 @@
+.modal-success {
+  width: 625px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0 0 26px 0;
+    line-height: 37px;
+    color: $color-night-rider;
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: $color-night-rider;
+    margin: 0 0 30px 0;
+
+    @include vp-767 {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__button {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include vp-767 {
+      width: 100%;
+    }
+
+    &.btn--sky {
+      width: 159px;
+
+      @include vp-767 {
+        width: 100%;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include vp-767 {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

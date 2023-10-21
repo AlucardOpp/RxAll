@@ -1,0 +1,31 @@
+mixin case-card(data, mod)
+  article.case-card(class=" case-card--" + mod, data-aos="fade-up")
+    h3!="Case study: "
+      span !{data.title}
+    .case-card__content
+      div.column
+        div
+          h4 Problem
+          each icon in data.problem.icons
+            +icon(icon.name + icon.mod, icon.width, icon.height)
+        p!=data.problem.text
+      div.column
+        div
+          h4 Solution
+          each icon in data.solution.icons
+            +icon(icon.name + icon.mod, icon.width, icon.height)
+        p!=data.solution.text
+    a.link.link--blue(href="#")
+      +icon("icon-book", 16, 14).link__icon.link__icon--left
+      | Learn more
+    .case-card__footer
+      if (true)
+        div
+          h4 Results
+          each icon in data.result.icons
+            +icon(icon.name + icon.mod, icon.width, icon.height)
+        ul
+          each item in data.result.list
+            li
+              b!=item.result
+              p!=item.text
